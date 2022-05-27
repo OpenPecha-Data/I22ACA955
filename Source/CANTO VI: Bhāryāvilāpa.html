@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=560' accesskey='1'>Aśvaghoṣa: Saundarananda</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Aśvaghoṣa: Saundarananda<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3628]" value="3628" id="lancheckbox" checked >Sanskrit: San: Johnston (1928)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3629]" value="3629" id="lancheckbox" checked >English: Eng: Cross (2015)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='560'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v560">Search in Aśvaghoṣa: Saundarananda</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=560'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=560'>Aśvaghoṣa: Saundarananda</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="61071.CANTOI:Kapilavāstuvarṇana|61072.CANTOII:Rājavarṇana|61073.CANTOIII:Tathāgatavarṇana|61074.CANTOIV:Bhāryāyācitaka|61075.CANTOV:Nandapravrājana|61076.CANTOVI:Bhāryāvilāpa|61077.CANTOVII:Nandivilāpa|61078.CANTOVIII:Strīvighāta|61079.CANTOIX:Madāpavāda|61080.CANTOX:Svarganidarśana|61081.CANTOXI:Svargāpavāda|61082.CANTOXII:Paryavamarśa|61083.CANTOXIII:Śīlendriyajaya|61084.CANTOXIV:Ādiprasthāno|61085.CANTOXV:Vitarkaprahāṇa|61086.CANTOXVI:Āryasatyavyākhyāna|61087.CANTOXVII:Amṛtādhigama|61088.CANTOXVIII:Ājñāvyākaraṇa|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61071.CANTOI:Kapilavāstuvarṇana" border=0 hspace=2><a id="href_61071.CANTOI:Kapilavāstuvarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050055&level=1&cid=548072" class="ajax_tree0">CANTO I: Kapilavāstuvarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61072.CANTOII:Rājavarṇana" border=0 hspace=2><a id="href_61072.CANTOII:Rājavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050118&level=1&cid=548135" class="ajax_tree0">CANTO II: Rājavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61073.CANTOIII:Tathāgatavarṇana" border=0 hspace=2><a id="href_61073.CANTOIII:Tathāgatavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050184&level=1&cid=548201" class="ajax_tree0">CANTO III: Tathāgatavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61074.CANTOIV:Bhāryāyācitaka" border=0 hspace=2><a id="href_61074.CANTOIV:Bhāryāyācitaka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050227&level=1&cid=548244" class="ajax_tree0">CANTO IV: Bhāryāyācitaka
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61075.CANTOV:Nandapravrājana" border=0 hspace=2><a id="href_61075.CANTOV:Nandapravrājana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050274&level=1&cid=548291" class="ajax_tree0">CANTO V: Nandapravrājana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61076.CANTOVI:Bhāryāvilāpa" border=0 hspace=2><a id="href_61076.CANTOVI:Bhāryāvilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050328&level=1&cid=548345" class="ajax_tree0">CANTO VI: Bhāryāvilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61077.CANTOVII:Nandivilāpa" border=0 hspace=2><a id="href_61077.CANTOVII:Nandivilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050378&level=1&cid=548395" class="ajax_tree0">CANTO VII: Nandivilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61078.CANTOVIII:Strīvighāta" border=0 hspace=2><a id="href_61078.CANTOVIII:Strīvighāta" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050431&level=1&cid=548448" class="ajax_tree0">CANTO VIII: Strīvighāta
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61079.CANTOIX:Madāpavāda" border=0 hspace=2><a id="href_61079.CANTOIX:Madāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050494&level=1&cid=548511" class="ajax_tree0">CANTO IX: Madāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61080.CANTOX:Svarganidarśana" border=0 hspace=2><a id="href_61080.CANTOX:Svarganidarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050546&level=1&cid=548563" class="ajax_tree0">CANTO X: Svarganidarśana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61081.CANTOXI:Svargāpavāda" border=0 hspace=2><a id="href_61081.CANTOXI:Svargāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050611&level=1&cid=548628" class="ajax_tree0">CANTO XI: Svargāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61082.CANTOXII:Paryavamarśa" border=0 hspace=2><a id="href_61082.CANTOXII:Paryavamarśa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050674&level=1&cid=548691" class="ajax_tree0">CANTO XII: Paryavamarśa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61083.CANTOXIII:Śīlendriyajaya" border=0 hspace=2><a id="href_61083.CANTOXIII:Śīlendriyajaya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050718&level=1&cid=548735" class="ajax_tree0">CANTO XIII: Śīlendriyajaya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61084.CANTOXIV:Ādiprasthāno" border=0 hspace=2><a id="href_61084.CANTOXIV:Ādiprasthāno" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050775&level=1&cid=548792" class="ajax_tree0">CANTO XIV: Ādiprasthāno
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61085.CANTOXV:Vitarkaprahāṇa" border=0 hspace=2><a id="href_61085.CANTOXV:Vitarkaprahāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050828&level=1&cid=548845" class="ajax_tree0">CANTO XV: Vitarkaprahāṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61086.CANTOXVI:Āryasatyavyākhyāna" border=0 hspace=2><a id="href_61086.CANTOXVI:Āryasatyavyākhyāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050898&level=1&cid=548915" class="ajax_tree0">CANTO XVI: Āryasatyavyākhyāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61087.CANTOXVII:Amṛtādhigama" border=0 hspace=2><a id="href_61087.CANTOXVII:Amṛtādhigama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050997&level=1&cid=549014" class="ajax_tree0">CANTO XVII: Amṛtādhigama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61088.CANTOXVIII:Ājñāvyākaraṇa" border=0 hspace=2><a id="href_61088.CANTOXVIII:Ājñāvyākaraṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1051071&level=1&cid=549088" class="ajax_tree0">CANTO XVIII: Ājñāvyākaraṇa
+</td></tr></table>
+<script language=javascript>test('61076.CANTOVI:Bhāryāvilāpa|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=560&amp;mid=1050328&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548345&amp;mid=1050328&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548345&amp;mid=1050328&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><div class='kilderef' id='4859938'></div><div class='clear'></div><span id='4859938bi' class='paragraph'>
+							tato hṛte bhartari gauraveṇa prītau hṛtāyām aratau kṛtāyām |<br />tatraiva harmyopari vartamānā na sundarī saiva tadā babhāse ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><div class='kilderef' id='4861022'></div><div class='clear'></div><span id='4861022bi' class='paragraph'>
+							6.1 And so, with her husband riven away through his respect for the Guru, bereft of her happiness, left joyless, <br /> Though she remained at the same spot, high up in the palace, Sundarī no longer seemed to be herself. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859939bi' class='paragraph'>
+							sā bhartur abhyāgamanapratīkṣā gavākṣam ākramya payodharābhyām |<br />dvāronmukhī calayoktrakā lalambe mukhena tiryaṅnatakuṇḍalena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861023bi' class='paragraph'>
+							6.2 Anticipating her husband’s approach, she leant forward, her breasts invading the bulls-eye window. <br /> Expectantly she looked out from the palace roof towards the gateway, her earrings dangling down across her face. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859940bi' class='paragraph'>
+							vilambhaārā calayoktrakā sā tasmād vimānād vinatā cakāśe |<br />tapaḥksayād apsarasāṃ vareva cyutaṃ vimānāt priyam īkṣamāṇā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861024bi' class='paragraph'>
+							6.3 With her pearl necklaces hanging down, and straps dishevelled, as she bent down from the palace, <br /> She looked like the most gorgeous of the heavenly nymphs (the apsarases) gazing from her celestial abode at her lover, as he falls down, having used up his ascetic credit.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859941bi' class='paragraph'>
+							sā khedasaṃsvinnalalāṭakena niśvāsanīṣpītaviśeṣakeṇa |<br />cintācalākṣeṇa mukhena tasthau bartāram anyatra viśaṅkamānā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861025bi' class='paragraph'>
+							6.4 With a cold sweat on her beautiful brow, her face-paint drying in her sighs, <br /> And her eyes restless with anxious thoughts, there she stood, suspecting her husband, somewhere else. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859942bi' class='paragraph'>
+							tataś cirasthānaparśrameña sthitaiva paryaṅkatale papāta |<br />tiryak ca śiśye pravikīrṇahārā sapādukaikārthavilambapādā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861026bi' class='paragraph'>
+							6.5 Tired out by a long time standing in that state, she dropped, just where she stood, onto a couch, <br /> And lay across it with her necklaces scattered and a slipper half hanging off her foot. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859943bi' class='paragraph'>
+							athātra kā cit pramadā sabāṣpāṃ tāṃ duḥkhitāṃ draṣṭum anīpsamānā |<br />prāsādasopānatalapraṇādaṃ cakāra padbhyāṃ sahasā rudantī ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861027bi' class='paragraph'>
+							6.6 One of her women, not wishing to see Sundarī in such tearful distress,<br /> Was making her way down from the palace penthouse, when she burst into tears, and made a commotion with her feet on the stairs. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859944bi' class='paragraph'>
+							tasyāś ca sopānatalapraṇādaṃ śrutaiva tūrṇaṃ punar utpapāta |<br />prītyā prasaktaiva ca saṃjaharṣa priyopayānaṃ pariśaṅkamānā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861028bi' class='paragraph'>
+							6.7 Hearing the sound on the stairs of that woman’s feet [Sundarī] quickly jumped up again; <br /> Transfixed with joy, she bristled with excitement, believing it to be the approach of her beloved. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859945bi' class='paragraph'>
+							sā trāsayantī valabhīpuṭasthān pārāvatān nūpuranisvanena |<br />sopānakukṣiṅ prasasāra harṣād bhraṣṭaṃ dukūlāntam acintayantī ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861029bi' class='paragraph'>
+							6.8 Scaring the pigeons in their rooftop roosts with the jangling of her ankle bracelets, <br /> She dashed to the stairwell, without worrying, in her excitement, about what extremity of her diaphonous raiments might be falling off. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859946bi' class='paragraph'>
+							tām aṅganāṃ prekṣya ca vipralabdhā niśvasya bhūyaḥ śayanaṃ prapede |<br />vivarṇavaktrā na rarāja cāśu vivarṇacandreva himāgame dyauḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861030bi' class='paragraph'>
+							6.9 On seeing the woman she was crestfallen; she sighed, threw herself again onto the couch, <br /> And no longer shone: with her face suddenly 01 pallid she was as grey as a pale-mooned sky in early winter.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859947bi' class='paragraph'>
+							sā duḥkhitā bhartur adarśanena kāmena kopena ca dahyamānā |<br />kṛtvā kare vaktram upopaviṣṭā cintānadīṃ śokajalāṃ tatāra ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861031bi' class='paragraph'>
+							6.10 Distressed at not seeing her husband, burning with desire and fury, <br /> She sat down with face in hand and steeped herself in the river of worries, whose water is sorrow.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859948bi' class='paragraph'>
+							tasyā mukhaṃ padmasapatnabhūtaṃ pāṇau sthitaṅ pallavarāgatāmre |<br />chāyāmayasyāmbhasi paṅkajasya babhau nataṃ padmam ivopariṣṭāt ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861032bi' class='paragraph'>
+							6.11 Her lotus-rivalling face, resting on the hennaed stem of her hand,<br /> Was like a lotus above the reflection in the water of its mud-born self, drooping down. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859949bi' class='paragraph'>
+							sā strīsvabhāvena vicintya tat tad dṛṣṭānurāge ’bhimukhe ’pi patyau |<br />dharmāśrite tattvam avindamānā saṃkalpya tat tad vilalāpa tat tat ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861033bi' class='paragraph'>
+							6.12 She considered various possibilities, in accordance with a woman’s nature; then, failing to see the truth that her husband had taken refuge in the dharma, while obviously still impassioned and in love with her, she constructed various scenarios and uttered various laments: &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859950bi' class='paragraph'>
+							eṣyāmy anāśyānaviśeṣakāyāṃ tvayīti kṛtvā mayi tāṃ pratijñām |<br />kasmān nu hetor dayitapratijñaḥ so ’dya priya me vitathapratijñaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861034bi' class='paragraph'>
+							6.13 “He promised me: ‘I’ll be back before your make-up is dry’; <br /> From what cause would such a cherisher of promises as my beloved is, be now a breaker of promises?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859951bi' class='paragraph'>
+							āryasya sādhoḥ karuṇātmakasya mannityabhīror atidakṣiṇasya |<br />kuto vikāro ’yam abhūtapūrvaḥ svenāparāgeṇa mamāpacārāt ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861035bi' class='paragraph'>
+							6.14 In him who was noble, good, compassionate, always in awe of me, and all too honest, <br /> How has such an unprecedented transformation come about? Through a loss of passion on his part? From a mistake of mine?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859952bi' class='paragraph'>
+							ratipriyasya priyavartino me priyasya nūnaṃ hṛdayaṃ viraktam |<br />tathāpi rāgo yadi tasya hi syān maccittarakṣī na sa nāgataḥ syāt ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861036bi' class='paragraph'>
+							6.15 The heart of my lover – lover of sexual pleasure and of me – has obviously waned in its passion, <br /> For if he did still love me, having regard for my heart, he would not have failed to return. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859953bi' class='paragraph'>
+							rūpeṇa bhāvena ca madviśiṣtā priyeṇa dṛṣṭā niyataṃ tato ’nyā |<br />tathā hi kṛtvā mayi moghasāntvaṃ lagnāṃ satīṃ mām agamad vihāya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861037bi' class='paragraph'>
+							6.16 Another woman, then, in beauty and in nature better than me, my beloved has surely beheld; <br /> For, having soothed me as he did with empty words, the guy has gone and left me, attached to him as I am.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859954bi' class='paragraph'>
+							bhaktiṃ sa buddhaṃ prati yām avocat tasya prayātuṃ mayi sopadeśaḥ |<br />munau prasādo yadi tasya hi syān mṛtyor ivogrād anṛtād bibhīyāt ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861038bi' class='paragraph'>
+							6.17 As for that devotion to Buddha of which he spoke, it was just a line to me for leaving; <br /> For if he were clearly settled on the Sage he would fear untruth no less than a grisly death.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859955bi' class='paragraph'>
+							lekārtham ādarśanam anyacitto vibhūṣayantya mama dhārayitvā |<br />bibharti so ’nyasya janasya taṅ cen namo ’stu tasmai calasauhṛdāya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861039bi' class='paragraph'>
+							6.18 While I put my make-up on, he held the mirror as a service to me, and thought of another! <br /> If he holds it now for that other so much for his fickle affection! &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859956bi' class='paragraph'>
+							necchanti yāḥ śokam avāptum evaṃ śraddhātum arhanti na tā narāṇām |<br />kva cānuvṛttir mayi sāsya pūrvaṃ tyāgaḥ kva cāyaṃ janavat kṣaṇena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861040bi' class='paragraph'>
+							6.19 Any woman who does not wish to suffer grief like this should never trust a man.<br /> How could he treat me before with such regard and then in a twinkling leave me like this, like anybody?” &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859957bi' class='paragraph'>
+							ity evamādi priyaviprakutā priye ’nyad āśaṅkya ca sā jagāda |<br />saṃbhrāntam āruhya ca tad vimānaṃ tāṃ strī sabāṣpā giram ity uvāca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861041bi' class='paragraph'>
+							6.20 This she said and more, love-lorn, and suspecting her love of loving another. <br />Then the giddy weeping woman, having dizzily climbed the palace stairs, tearfully told her these words:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859958bi' class='paragraph'>
+							yuvāpi tāvat priyadarśano ’pi saubhāgyabhāgvyābhijanānvito ’pi |<br />yas tvāṃ priyo nābhyacarat kadā cit tam anyathā yāsyatikātarāsi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861042bi' class='paragraph'>
+							6.21 “Though he may be young, good-looking, full of noble ancestry, and filled with charm and fortune, <br /> Never did your husband cheat on you. You are being silly, and judging him amiss.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859959bi' class='paragraph'>
+							mā svāminaṃ svāmini doṣato gāḥ priyaṃ priyārhaṃ priyakāriṇaṃ tam |<br />na sa tvad anyāṃ pramadām avaiti svacakravākyā iva cakravākaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861043bi' class='paragraph'>
+							6.22 Ma’am! Do not accuse your loving husband, a doer of loving deeds who merits your love; <br /> He never even looks at any woman other than you, like greylag gander with kindred greylag goose.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859960bi' class='paragraph'>
+							sa tu tvadarthaṃ gṛhavāsam īpsan jijīviṣus tvatparitoṣahetoḥ |<br />bhrātrā kilāryeṇa tathāgatena pravrājito netrajalārdravaktraḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861044bi' class='paragraph'>
+							6.23 For you, he wished to stay at home; for your delight, he wished to live; <br /> But his noble brother, the Tathāgata, so they say, has banished him, his face made wet by tears, into the wandering life.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859961bi' class='paragraph'>
+							śrutvā tato bhartari tāṃ pravṛttiṃ savepathuḥ sā sahasotpapāta |<br />pragṛhya bāhū virurāva coccair hṛdīva digdhābhihatā kareṇuḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861045bi' class='paragraph'>
+							6.24 Then, on hearing what had happened to her husband, all of a sudden, up she leapt, shaking; <br /> She clasped her arms and screamed out loud like a she-elephant shot in the heart by a poisoned arrow. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859962bi' class='paragraph'>
+							sā rdoanāroṣitaraktadṛṣṭiḥ saṃtāpasaṃkṣobhitagātrayaṣṭiḥ |<br />papāta śīrṇākulahārayaṣṭiḥ phalātibhārād iva cūtayaṣṭiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861046bi' class='paragraph'>
+							6.25 Her eyes puffed-up and reddened by tears, the slender trunk of her body trembling with anguish, <br /> She broke and scattered strings of pearls, as down she fell, like a mango branch weighed down by too much fruit.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859963bi' class='paragraph'>
+							sā padmarāgaṃ vasanaṃ vasānā padmānanā padmadalāyatākṣī |<br />padmā vipadmā patiteva lakṣmīḥ śuśoṣa padmasrag ivātapena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861047bi' class='paragraph'>
+							6.26 Wearing clothes suffused with lotus colours, with lotus face, and eyes as long as lotus petals, <br /> She was like a Lotus-Hued Lakṣmī, who had fallen from her lotus [pedestal]. And she withered like a lotus-garland left in the sun.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859964bi' class='paragraph'>
+							saṃcintya saṃcintya guṇāṃś ca bhartur dīrghaṃ niśaśavāsa tatāma caiva |<br />vibhūṣaśrīnihite prakoṣṭhe tāmre karāgre ca vinirdudhāva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861048bi' class='paragraph'>
+							6.27 She thought and thought about her husband’s good points, sighing long and hard and gasping <br /> As out she flung the arms that bore her gleaming jewels and [hennaed] hands, with reddened fingertips.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859965bi' class='paragraph'>
+							na bhuṣaṇārtho mama saṃpratīti sā dikṣu cikṣepa vibhūṣaṇāni |<br />nirbhuṣaṇā sā patitā cakāśe viśīrṇapuṣpastabakā lateva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861049bi' class='paragraph'>
+							6.28 “Now I don’t have any need for ornaments!” she cried, as she hurled her jewels in all directions. <br /> Unadorned and drooping, she resembled a creeper shorn of blossoms. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859966bi' class='paragraph'>
+							dhṛtaḥ priyeṇāyam abhūn mameti rukmatsaruṃ darpaṇam āliliṅge |<br />yatnāc ca vinyastatamālapattrau ruṣṭeva dhṛṣṭaṃ pramamārja gaṇḍau ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861050bi' class='paragraph'>
+							6.29 She clasped the golden-handled mirror, and reflected, “My husband held this up for me.” <br /> And the tamāla paint she had applied so carefully, she rubbed aggressively off her cheeks, as if the paint had angered her. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859967bi' class='paragraph'>
+							sā cakravākvīka bhṛśaṃ cukūja śyenāgrapakṣakṣatacakravākā |<br />vispardhamāneva vimānasaṃstahiḥ pārāvataiḥ kūjanalokaṇṭhaiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861051bi' class='paragraph'>
+							6.30 Like a greylag goose, when a hawk has wounding talons on the gander’s wing, she hooted mightily, <br />As if in competition with the cooing pigeons on the palace roof, whose throats were all atremble. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859968bi' class='paragraph'>
+							vicitramṛdvāstaraṇe ’pi suptā vaiḍūryavajrapratimaṇḍite ’pi |<br />rukmāṅgapāde śayane mahārhe na śarma lebhe pariceṣṭamānā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861052bi' class='paragraph'>
+							6.31 She lay down to sleep in soft and gorgeous bedclothes, on a bed bedecked with cats-eye gems and diamonds, <br /> But in her costly crib with golden legs, she tossed and turned, and no respite did she obtain.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859969bi' class='paragraph'>
+							saṃdṛṣya bhartuś ca vibhūṣañāni vāsāṃsi vīṇāprabhṛtiṃś ca līlāḥ |<br />tamo viveśābhinanāda coccaiḥ paṅkāvatīrṇeva ca saṃsasāda ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861053bi' class='paragraph'>
+							6.32 She eyed her husband’s ornaments; his clothes, guitar and other items of amusement; <br /> Thus she entered deeply into darkness: she raised a shriek, and then, as if descending into a mire, sank down. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859970bi' class='paragraph'>
+							sā sundarī śvāsacalodarī hi vajrāgnisaṃbhinnadarīguheva |<br />śokāgnināntardhṛdi dahyamānā vibhrāntacitteva tadā babhūva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861054bi' class='paragraph'>
+							6.33 Her belly trembled out of breathlessness, like a cave being rent inside by fiery thunderbolts. <br /> As, in her innermost heart, she burned with the fire of grief, Sundarī seemed at that moment to be going out of her mind. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859971bi' class='paragraph'>
+							ruroda mamlau virurāva jaglau babhrāma tasthau vilalāpa dadhyau |<br />cakāra roṣaṃ vicakāra mālyaṃ cakarta vaktraṃ vicakarṣa vastram ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861055bi' class='paragraph'>
+							6.34 She howled, then wilted, screamed, then swooned; she reeled, stood rooted, wailed then brooded. <br /> She vented anger and rended garlands; she scratched her face and slashed her clothes. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859972bi' class='paragraph'>
+							tāṃ cārudantīṃ prasabhaṃ rudantīṃ saṃśrutya nāryaḥ paramābhitaptāḥ |<br />antargṛhād āruruhur vimānaṃ trāsena kiṃnarya ivādripṛṣṭham ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861056bi' class='paragraph'>
+							6.35 Hearing the howling of the lovely-toothed one – for O, how lovely were her teeth! – the ladies-in-waiting suffered utmost torment; <br /> They climbed from inside the palace up to the roof, like nervous kiṁnarīs ascending a mountain peak. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859973bi' class='paragraph'>
+							bāṣpeṇa tāḥ klinnaviṣaṇṇavaktrā varṣeṇa padminya ivārdrapadmāḥ |<br />sthānānurūpeṇa yathābhimānaṃ nililyire tām anu dahyamānāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861057bi' class='paragraph'>
+							6.36 Their despondent faces wet with tears, like lotus ponds with rain-soaked lotus buds, <br /> They settled down along with her, according to rank and as they wished, and along with her they burned in grief.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859974bi' class='paragraph'>
+							tābhir vṛtā harmyatale ’ṅganābhiś cintātanuḥ sā sutanur babhāse |<br />śatahradābhiḥ pariveṣṭiteva śaśāṅkalekhā śaradbhramadhye ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861058bi' class='paragraph'>
+							6.37 On the palace roof, enfolded by her women, the slender Sundarī, gaunt with worry, <br /> Seemed like a streak of crescent moon enshrouded among the autumn clouds by a hundred rays of lightning.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859975bi' class='paragraph'>
+							yā tatra tāsāṃ vacasopapannā mānyā ca tasyā vayasādhikā ca |<br />sā pṛṣṭhatas tāṃ tu samāliliṅge pramṛhya cāśrūṇi vacāṃsy uvāca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861059bi' class='paragraph'>
+							6.38 There was one among them there, however, who was senior in years, and good with words, a well-respected woman: <br /> Holding Sundarī from behind in a firm embrace and wiping tears away, she spoke as follows:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859976bi' class='paragraph'>
+							rājarṣivadhvās tava nānurūpo dharmāśrite bhartari jātu śokaḥ |<br />ikṣvākuvaṃśe hy abhikāṅkṣitāni dāyādyabhūtāni tapovanāni ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861060bi' class='paragraph'>
+							6.39 “Grief does ill become you, the wife of a royal seer, when your husband has taken refuge in dharma; <br /> For in the lineage of Ikṣvāku, an ascetic forest is a desired inheritance&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859977bi' class='paragraph'>
+							prāyeṇa mokṣāya viniḥsṛtānāṃ śākyarṣabhāṇāṃ viditāḥ striyas te |<br />tapovanānīva gṛhāṇi yāsāṃ sādhvīvrataṃ kāmavadāsritānām ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861061bi' class='paragraph'>
+							6.40 Well you know of wives of Śākya bulls gone forth in search of freedom: <br /> As a rule, they turn their houses almost into ascetic groves and they observe the vow of chastity, as if it were a pleasure.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859978bi' class='paragraph'>
+							yady anyayā rūpaguṇādhikatvād bhartā hṛtas te kuru bāṣpamokṣam |<br />manasvinī rūpavatī guṇādhyā hṛdi kṣate kātra hi nāśru muñcet ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861062bi' class='paragraph'>
+							6.41 If your husband had been stolen by another, due to her superior looks and qualities, then tears you should let flow; <br /> For how could any beautiful and virtuous wife, who abounds in excellence, refrain from shedding teardrops when her heart was broken?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859979bi' class='paragraph'>
+							athāpi kiṃ cid vyasanaṃ prapanno mā caiva tad bhūt sadṛśo ’tra bāṣpaḥ |<br />ato viśiṣṭaṃ na hi duḥkham asti kulodgatāyāḥ patidevatāyāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861063bi' class='paragraph'>
+							6.42 Or had he met with some disaster – and may no such thing ever be! – then yes, tears; <br />Because there is no greater sorrow for a woman of noble birth who dignifies her husband as if he were a god.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859980bi' class='paragraph'>
+							atha tv idānīṃ laḍitaḥ sukhena svasthaḥ phalastho vyasnāny adṛṣtvā |<br />vītaspṛho dharmam anuprapannaḥ kiṃ viklave rodiṣi harṣakāle ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861064bi' class='paragraph'>
+							6.43 But on the contrary, he now is roving happily, meeting no disasters, but enjoying a healthy and fruitful life. <br /> Free from eager longing, he is following dharma: at a time for celebration, why are you in such a state of weeping consternation?”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859981bi' class='paragraph'>
+							ity evam uktāpi bahuprakāraṃ snehāt tayā naiva dhṛtiṃ cakāra |<br />athāparā tāṃ manaso ’nukūlaṃ kālopapannaṃ praṇayād uvāca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861065bi' class='paragraph'>
+							6.44 Though this woman, with her [unctious] kindness, thus put forward many sorts of argument, [Sundarī] could not be satisfied at all. <br /> Then another woman, with a sense of intimacy, said what helped her mind and fit the occasion.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859982bi' class='paragraph'>
+							bravīmi satyaṃ suviniścitaṃ me prāptaṃ priyaṃ drakṣyasi śīghram eva |<br />tvayā vinā sthāsyati tatra nāsau sattvāṣrayaś cetanayeva hīnaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861066bi' class='paragraph'>
+							6.45 “Truly and categorically, I am telling you that soon enough you’ll see your husband back again. <br /> Dispossessed of you, the fellow will survive out there no longer than living things survive when dispossessed of consciousness.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859983bi' class='paragraph'>
+							aṅke ’pi lakṣmyā na sa nirvṛtaḥ syāt tvaṃ tasya pārśve yadi tatra na syāḥ |<br />āpatsu kṛcchrāsv api cāgatāsu tvāṃ paśyatas tasya bhaven na duḥkham ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861067bi' class='paragraph'>
+							6.46 Even in the lap of luxury he could not be happy, lacking you there by his side; <br /> And even in the direst pickle, not a thing could trouble him, as long as you were in his sight.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859984bi' class='paragraph'>
+							tvaṃ nirvṛtiṃ gaccha niyaccha bāṣpaṃ taptāśrumokṣāt parirakṣa cakṣuḥ |<br />yas tasya bhāvas tvayi yaś ca rāgo na raṃsyate tvadvirahāt sa dharme ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861068bi' class='paragraph'>
+							6.47 Be happy. Don’t keep crying. Spare your eyes from shedding molten tears. <br /> The way he feels for you, and his passion, are such that he, bereft of you, will find no pleasure in the dharma.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859985bi' class='paragraph'>
+							syād atra nāsau kulasattvagoyāt kāṣāyam ādāya vihāsyatīti |<br />anātmanādāya gṛhonmukhasya punar vimoktuṃ ka ivāsti doṣaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861069bi' class='paragraph'>
+							6.48 Some might say that having worn the ochre robe, he won’t relinquish it, by dint of noble birth combined with strength of character. <br /> But, he put it on unwillingly, while looking forward to going home: what fault is there in taking it back off?”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859986bi' class='paragraph'>
+							ity yuvatijanena sāntvyamānā hṛtahṛdayā ramaṇena sundarī sā |<br />dramiḍam abhimukhī pureva rambhā kṣitim agamat parivāritāpsarobhiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861070bi' class='paragraph'>
+							6.49 Thus consoled by her little women when her husband had purloined her heart, <br /> Sundarī came to earth, just as Rambhā, 08 with her heart turned towards Dramiḍa, came once upon a time, enfolded in the midst of sister apsarases. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859987bi' class='paragraph'>
+							saundaranande mahākāvye bhāryāvilāpo nāma ṣaṣṭaḥ sargah || ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4859938";
+							kilderef = "Saund San: Johnston (1928) 6.1 - San: Johnston (1928) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861071bi' class='paragraph'>
+							The 6th canto in the epic poem Handsome Nanda, titled “A Wife’s Lament.”&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4861022";
+							kilderef = "Saund Eng: Cross (2015)  - Eng: Cross (2015) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'></div><div class='textvar' style='width:49%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=1bc9e5d2-b346-11e5-99e8-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

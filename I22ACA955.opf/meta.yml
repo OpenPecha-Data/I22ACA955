@@ -1,0 +1,91 @@
+id: I22ACA955
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T20:39:07.374694'
+last_modified: '2022-05-27T20:39:07.374707'
+parser: null
+source_metadata:
+  title: 'Aśvaghoṣa: Saundarananda'
+  language: sa
+  base:
+    fAF3B:
+      title: 'CANTO I: Kapilavāstuvarṇana'
+      base_file: fAF3B.txt
+      order: 1
+    f481C:
+      title: 'CANTO II: Rājavarṇana'
+      base_file: f481C.txt
+      order: 2
+    f11D1:
+      title: 'CANTO III: Tathāgatavarṇana'
+      base_file: f11D1.txt
+      order: 3
+    f9B30:
+      title: 'CANTO IV: Bhāryāyācitaka'
+      base_file: f9B30.txt
+      order: 4
+    f7B39:
+      title: 'CANTO V: Nandapravrājana'
+      base_file: f7B39.txt
+      order: 5
+    fE64E:
+      title: 'CANTO VI: Bhāryāvilāpa'
+      base_file: fE64E.txt
+      order: 6
+    f5560:
+      title: 'CANTO VII: Nandivilāpa'
+      base_file: f5560.txt
+      order: 7
+    f0660:
+      title: 'CANTO VIII: Strīvighāta'
+      base_file: f0660.txt
+      order: 8
+    fA077:
+      title: 'CANTO IX: Madāpavāda'
+      base_file: fA077.txt
+      order: 9
+    fE89A:
+      title: 'CANTO X: Svarganidarśana'
+      base_file: fE89A.txt
+      order: 10
+    fD381:
+      title: 'CANTO XI: Svargāpavāda'
+      base_file: fD381.txt
+      order: 11
+    f6AAB:
+      title: 'CANTO XII: Paryavamarśa'
+      base_file: f6AAB.txt
+      order: 12
+    fF4D4:
+      title: 'CANTO XIII: Śīlendriyajaya'
+      base_file: fF4D4.txt
+      order: 13
+    fCC52:
+      title: 'CANTO XIV: Ādiprasthāno'
+      base_file: fCC52.txt
+      order: 14
+    f84D4:
+      title: 'CANTO XV: Vitarkaprahāṇa'
+      base_file: f84D4.txt
+      order: 15
+    fF6A6:
+      title: 'CANTO XVI: Āryasatyavyākhyāna'
+      base_file: fF6A6.txt
+      order: 16
+    fD7B4:
+      title: 'CANTO XVII: Amṛtādhigama'
+      base_file: fD7B4.txt
+      order: 17
+    fAEDE:
+      title: 'CANTO XVIII: Ājñāvyākaraṇa'
+      base_file: fAEDE.txt
+      order: 18
+  chapter_to_tile: {}
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

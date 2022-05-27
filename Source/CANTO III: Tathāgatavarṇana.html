@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=560' accesskey='1'>Aśvaghoṣa: Saundarananda</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Aśvaghoṣa: Saundarananda<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3628]" value="3628" id="lancheckbox" checked >Sanskrit: San: Johnston (1928)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3629]" value="3629" id="lancheckbox" checked >English: Eng: Cross (2015)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='560'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v560">Search in Aśvaghoṣa: Saundarananda</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=560'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=560'>Aśvaghoṣa: Saundarananda</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="61071.CANTOI:Kapilavāstuvarṇana|61072.CANTOII:Rājavarṇana|61073.CANTOIII:Tathāgatavarṇana|61074.CANTOIV:Bhāryāyācitaka|61075.CANTOV:Nandapravrājana|61076.CANTOVI:Bhāryāvilāpa|61077.CANTOVII:Nandivilāpa|61078.CANTOVIII:Strīvighāta|61079.CANTOIX:Madāpavāda|61080.CANTOX:Svarganidarśana|61081.CANTOXI:Svargāpavāda|61082.CANTOXII:Paryavamarśa|61083.CANTOXIII:Śīlendriyajaya|61084.CANTOXIV:Ādiprasthāno|61085.CANTOXV:Vitarkaprahāṇa|61086.CANTOXVI:Āryasatyavyākhyāna|61087.CANTOXVII:Amṛtādhigama|61088.CANTOXVIII:Ājñāvyākaraṇa|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61071.CANTOI:Kapilavāstuvarṇana" border=0 hspace=2><a id="href_61071.CANTOI:Kapilavāstuvarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050055&level=1&cid=548072" class="ajax_tree0">CANTO I: Kapilavāstuvarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61072.CANTOII:Rājavarṇana" border=0 hspace=2><a id="href_61072.CANTOII:Rājavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050118&level=1&cid=548135" class="ajax_tree0">CANTO II: Rājavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61073.CANTOIII:Tathāgatavarṇana" border=0 hspace=2><a id="href_61073.CANTOIII:Tathāgatavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050184&level=1&cid=548201" class="ajax_tree0">CANTO III: Tathāgatavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61074.CANTOIV:Bhāryāyācitaka" border=0 hspace=2><a id="href_61074.CANTOIV:Bhāryāyācitaka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050227&level=1&cid=548244" class="ajax_tree0">CANTO IV: Bhāryāyācitaka
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61075.CANTOV:Nandapravrājana" border=0 hspace=2><a id="href_61075.CANTOV:Nandapravrājana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050274&level=1&cid=548291" class="ajax_tree0">CANTO V: Nandapravrājana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61076.CANTOVI:Bhāryāvilāpa" border=0 hspace=2><a id="href_61076.CANTOVI:Bhāryāvilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050328&level=1&cid=548345" class="ajax_tree0">CANTO VI: Bhāryāvilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61077.CANTOVII:Nandivilāpa" border=0 hspace=2><a id="href_61077.CANTOVII:Nandivilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050378&level=1&cid=548395" class="ajax_tree0">CANTO VII: Nandivilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61078.CANTOVIII:Strīvighāta" border=0 hspace=2><a id="href_61078.CANTOVIII:Strīvighāta" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050431&level=1&cid=548448" class="ajax_tree0">CANTO VIII: Strīvighāta
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61079.CANTOIX:Madāpavāda" border=0 hspace=2><a id="href_61079.CANTOIX:Madāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050494&level=1&cid=548511" class="ajax_tree0">CANTO IX: Madāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61080.CANTOX:Svarganidarśana" border=0 hspace=2><a id="href_61080.CANTOX:Svarganidarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050546&level=1&cid=548563" class="ajax_tree0">CANTO X: Svarganidarśana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61081.CANTOXI:Svargāpavāda" border=0 hspace=2><a id="href_61081.CANTOXI:Svargāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050611&level=1&cid=548628" class="ajax_tree0">CANTO XI: Svargāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61082.CANTOXII:Paryavamarśa" border=0 hspace=2><a id="href_61082.CANTOXII:Paryavamarśa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050674&level=1&cid=548691" class="ajax_tree0">CANTO XII: Paryavamarśa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61083.CANTOXIII:Śīlendriyajaya" border=0 hspace=2><a id="href_61083.CANTOXIII:Śīlendriyajaya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050718&level=1&cid=548735" class="ajax_tree0">CANTO XIII: Śīlendriyajaya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61084.CANTOXIV:Ādiprasthāno" border=0 hspace=2><a id="href_61084.CANTOXIV:Ādiprasthāno" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050775&level=1&cid=548792" class="ajax_tree0">CANTO XIV: Ādiprasthāno
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61085.CANTOXV:Vitarkaprahāṇa" border=0 hspace=2><a id="href_61085.CANTOXV:Vitarkaprahāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050828&level=1&cid=548845" class="ajax_tree0">CANTO XV: Vitarkaprahāṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61086.CANTOXVI:Āryasatyavyākhyāna" border=0 hspace=2><a id="href_61086.CANTOXVI:Āryasatyavyākhyāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050898&level=1&cid=548915" class="ajax_tree0">CANTO XVI: Āryasatyavyākhyāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61087.CANTOXVII:Amṛtādhigama" border=0 hspace=2><a id="href_61087.CANTOXVII:Amṛtādhigama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050997&level=1&cid=549014" class="ajax_tree0">CANTO XVII: Amṛtādhigama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61088.CANTOXVIII:Ājñāvyākaraṇa" border=0 hspace=2><a id="href_61088.CANTOXVIII:Ājñāvyākaraṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1051071&level=1&cid=549088" class="ajax_tree0">CANTO XVIII: Ājñāvyākaraṇa
+</td></tr></table>
+<script language=javascript>test('61073.CANTOIII:Tathāgatavarṇana|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=560&amp;mid=1050184&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548201&amp;mid=1050184&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548201&amp;mid=1050184&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><div class='kilderef' id='4859794'></div><div class='clear'></div><span id='4859794bi' class='paragraph'>
+							tapase tataḥ kapilavāstu hayagarathaughasaṃkulam |<br />śrīmad abhayam anuraktajanaṃ sa vihāya viścitamanā vanaṃ yayau ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><div class='kilderef' id='4860878'></div><div class='clear'></div><span id='4860878bi' class='paragraph'>
+							3.1 For ascetic practice, then, he left Kapilavāstu – a teeming mass of horses, elephants and chariots, <br />Majestic, safe, and loved by its citizens. Leaving the city, he started resolutely for the forest.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859795bi' class='paragraph'>
+							vividhāgmāṃs tapasi tāṃś ca vividhaniyamāśrayān munīn |<br />prekṣya sa viṣayatṛākṛpaṇān anavasthitaṃ tapa iti nyavartata ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860879bi' class='paragraph'>
+							3.2 In the approach to ascetic practice of the various traditions, and in the attachment of sages to various restraints,<br />He observed the miseries of thirsting for an object. Seeing asceticism to be unreliable, he turned away from it.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859796bi' class='paragraph'>
+							atha mokṣavādinam arāḍam upaśamamatiṃ tathoḍrakam |<br />tattvakṛtamatir upāsya jahāvayam apy amārga iti māgakovidaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860880bi' class='paragraph'>
+							3.3 Then Ārāda, who spoke of freedom, and likewise Uḍraka, who inclined towards quietness,<br />He served, his heart set on truth, and he left. He who intuited the path intuited: “This also is not it.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859797bi' class='paragraph'>
+							sa vicārayan jagati kiṃ nu paramam iti taṃ tam āgamam |<br />niścayam anadhigataḥ parataḥ paramaṃ cacāra tapa eva duṣkaram ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860881bi' class='paragraph'>
+							3.4 Of the different traditions in the world, he asked himself, Which one was the best?<br />Not obtaining certainty elsewhere, he entered after all into ascetic practice that was most severe.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859798bi' class='paragraph'>
+							atha naiṣa mārga iti vikṣya tad api vipulaṃ jahau tapaḥ |<br />dhyānaviṣayam avagamya paraṃ bubhuje varānnam amṛtatvabuddhaye ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860882bi' class='paragraph'>
+							3.5 Then, having ascertained that this was not the path, he abandoned that extreme asceticism too.<br />Understanding the realm of meditation to be supreme, he ate good food in readiness to realise the deathless.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859799bi' class='paragraph'>
+							sa suvarṇapīnayugabāhur ṛṣabhagatir āyatekṣaṇaḥ |<br />plakṣam avaniruham abhyagamat paramasya niścayavidher bubhutsayā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860883bi' class='paragraph'>
+							3.6 With golden arms fully expanded and as if in a yoke, with lengthened eyes, and bull-like gait, <br />He came to a fig tree, growing up from the earth, with the will to awakening that belongs to the supreme method of investigation.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859800bi' class='paragraph'>
+							upaviśya tatra kṛtabuddhir acaldhṛtir adrirājavat |<br />mārabalam ajayad ugram atho bubudhe padaṃ śivam ahāryam avyayam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860884bi' class='paragraph'>
+							3.7 Sitting there, mind made up, as unmovingly stable as the king of mountains,<br />He overcame the grim army of Māra and awoke to the step which is happy, irremovable, and irreducible.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859801bi' class='paragraph'>
+							avagamya taṃ ca kṛtakāryam amṛtamanaso divaukasaḥ |<br />harṣam atulam agaman muditā vimukhī tu mārapariṣat pracukṣubhe ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860885bi' class='paragraph'>
+							3.8 Sensing the completion of his task, the denizens of heaven whose heart’s desire is the deathless nectar<br />Buzzed with unbridled joy. But Māra’s crew was downcast and trembled.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859802bi' class='paragraph'>
+							sanagā ca bhūḥ pravicāla hutavahasakaḥ śivo vavau |<br />nedur api ca suradundubhayaḥ pravavarṣa cāmbudharavarjitaṃ nabhaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860886bi' class='paragraph'>
+							3.9 The earth with its mountains shook, that which feeds the fire blew benignly,<br />The drums of the gods sounded, and from the cloudless sky rain fell. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859803bi' class='paragraph'>
+							avabudhya caiva paramārtham ajaram anukampayā vibhuḥ |<br />nityam amṛtam upadarśyituṃ sa varāñasīparikarām ayāt purīm ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860887bi' class='paragraph'>
+							3.10 Awake to the one great ageless purpose, and universal in his compassion, <br />He proceeded, in order to display the eternal deathless nectar, to the city sustained by the waters of the Varaṇā and the Asī – to Vārāṇasī. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859804bi' class='paragraph'>
+							atha dharmacakram ṛtanābhi dhṛtimatisamādhinemimat |<br />tatra vinayanimāram ṛṣir jagato hitāya pariṣady avartayat ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860888bi' class='paragraph'>
+							3.11 And so the wheel of dharma – whose hub is uprightness, whose rim is constancy, determination, and balanced stillness, <br />And whose spokes are the rules of discipline – there the Seer turned, in that assembly, for the welfare of the world.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859805bi' class='paragraph'>
+							iti duḥkham etad iyam asya samudayalatā pravartikā |<br />śāntir iyam ayam upāya iti pravibhāgaśaḥ param idaṃ catuṣṭayam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860889bi' class='paragraph'>
+							3.12 “This is suffering; this is the tangled mass of causes producing it;<br />This is cessation; and here is a means.” Thus, one by one, this supreme set of four,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859806bi' class='paragraph'>
+							abhidhāya ca triparivartam atulam anivartyam uttamam |<br />dvādaśaniyatavikalpam ṛṣir vinināya kauṇḍinasagotram āditaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860890bi' class='paragraph'>
+							3.13 The seer set out, with its the three divisions of the unequalled, the incontrovertible, the ultimate,<br />And with its statement of twelvefold linkage; after which he instructed, as the first follower, him of the Kauṇḍinya clan.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859807bi' class='paragraph'>
+							sa hi doṣasāgaram agādham upadhijalam ādhijanutkam |<br />krodhamadabhayatarṅgacalaṃ pratatāra lokam api vyatārayat ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860891bi' class='paragraph'>
+							3.14 For the fathomless sea of faults, whose water is falsity, where fish are cares,<br />And which is disturbed by waves of anger, lust, and fear; he had crossed, and he took the world across too.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859808bi' class='paragraph'>
+							sa vinīya kāśiṣu gayeṣu bahujanam atho girivraje |<br />pitryam api paramakāruṇiko nagaraṃ yayāv anujighṛkṣayā tadā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860892bi' class='paragraph'>
+							3.15 Having instructed many people at Kāśi and at Gaya As also at Giri-vraja,<br />He made his way then to the city of his fathers, in his deeply compassionate desire to include it.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859809bi' class='paragraph'>
+							viṣayātmakasya hi ianasya bahuvividhamārgasevinaḥ |<br />sūryasadṛśavapur abhyudito vijahāra sūrya iva gautamas tamaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860893bi' class='paragraph'>
+							3.16 To people possessed by ends, serving many and various paths,<br />Splendour had arisen that seemed like the sun: Gautama was like the sun, dispelling darkness. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859810bi' class='paragraph'>
+							abhitas tataḥ kapilavāstu paramaśubhavāstusaṃstutam |<br />vastumatiśuci śivopavanaṃ sa dadarśa niḥspṛhatayā yathā vanam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860894bi' class='paragraph'>
+							3.17 Seeing then all sides of Kapilavāstu – which was famed for its most beautiful properties, <br /> And was pure and clean in substance and design, and pleasantly wooded – he looked without longing, as though at a forest.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859811bi' class='paragraph'>
+							aparigrahaḥ sa hi babhūva niyatamatir ātmanīśvaraḥ |<br />naikavidhabhayakareṣu kim-u svajanasvadeśajanamitravastuṣu ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860895bi' class='paragraph'>
+							3.18 For he had become free of belonging: he was sure in his thinking, the master of himself.<br /> How much less did he belong to those causes of manifold worry – family, countrymen, friends and property? &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859812bi' class='paragraph'>
+							pratipūjayā na sa jaharṣa na ca śucam avajñayāgamat |<br />niścitamatir asicandanayor na jagāma duḥkhasukhayoś ca vikriyām ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860896bi' class='paragraph'>
+							3.19 Being revered gave him no thrill, and neither did disrespect cause him any grief. <br /> His direction was decided, come sword or sandalwood, and whether the going was tough or easy he was not diminished.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859813bi' class='paragraph'>
+							atha pārthivaḥ samupalabhya sutam upagataṃ tathāgatam |<br />tūrṇam ababhuturagānugataḥ sutadarśanotsukatayābhiniryayau ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860897bi' class='paragraph'>
+							3.20 And so the king learned that his son had arrived as the Tathāgata, the One Arrived Thus; <br /> With but a few horses straggling behind him, out the king charged, in his eagerness to see his son. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859814bi' class='paragraph'>
+							sugatas tathāgatam avekṣya narapatim adhīram āśayā |<br />śeṣam api ca janam aśrumukhaṃ vinīṣaya gaganam utpapāta ha ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860898bi' class='paragraph'>
+							3.21 The Sugata, the One Gone Well, saw the king coming thus, composure lost in expectation, <br />And saw the rest of the people too, with tearful faces; wishing to direct them, up he took himself, into the sky. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859815bi' class='paragraph'>
+							sa vicakrame divi bhuvīva punar upaviveśa tasthivān |<br />niścalamatir aśayiṣṭa punar bahudhābhavat punar abhūt tathaikadhā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860899bi' class='paragraph'>
+							3.22 He strode over heaven as if over the earth; and sat again, in the stillness of having stopped. <br /> Without changing his direction, he lay down; he showed many changing forms while remaining, in this manner, all of one piece.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859816bi' class='paragraph'>
+							salile kṣitāv iva cacāra jalam iva viveṣa medinīm |<br />megha iva divi vavarṣa punaḥ punar ajvalan nava ivodito raviḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860900bi' class='paragraph'>
+							3.23 He walked over water as if on dry land, immersed himself in the soil as though it were water, <br /> Rained as a cloud in the sky, and shone like the newly-risen sun.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859817bi' class='paragraph'>
+							yugapaj jvalan jvalanavac ca jalam avasṛhaṃś ca meghavat |<br />taptakanakasadṛśaprabhayā sa babhau pradīpta iva sandhyayā ghanaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860901bi' class='paragraph'>
+							3.24 Simultaneously glowing like a fire and passing water like a cloud, <br /> He gave off a light resembling molten gold, like a cloud set aglow by daybreak or by dusk.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859818bi' class='paragraph'>
+							tam udīkṣya hemamaṇijālavalayinam ivotthitaṃ dhvajam |<br />prītim agamad atulāṃ nṛpatir janatā natāś ca bahumānam abhyayuḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860902bi' class='paragraph'>
+							3.25 Looking up at him in the network of gold and pearls that seemed to wrap around him like an upraised flag, <br />The king became joyful beyond measure and the assembled people, bowing down, felt deep appreciation. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859819bi' class='paragraph'>
+							atha bhājanīkṛtam avekṣya manujapatim ṛddhisaṃpadā |<br />paurajanam api ca tatpravaṇaṃ nijagāda dharmavinayaṃ vināyakaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860903bi' class='paragraph'>
+							3.26 So, perceiving that he had made a vessel of the ruler of men, through the wealth of his accomplishments,<br />And that the townsfolk also were favourably disposed, the Guide gave voice to the dharma and the discipline.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859820bi' class='paragraph'>
+							nṛpatis tataḥ prathamam āpa phalam amṛtadharmasiddhayoḥ |<br />dharmam atulam adhigamya muner munaye nanāma sa yato gurāv iva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860904bi' class='paragraph'>
+							3.27 Then the royal hero reaped the first fruit For the fulfillment of the deathless dharma.<br />Having obtained unthinkable dharma from the sage, he bowed accordingly in the sage’s direction, as to a guru.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859821bi' class='paragraph'>
+							bahavaḥ prasannamanaso ’tha jananamaraṇārtibhīravaḥ |<br />śākyatanayavṛṣabhāḥ kṛtino vṛṣabhā invānalabhayāt pravavrajuḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860905bi' class='paragraph'>
+							3.28 Many then who were clear in mind – alert to the agony of birth and death –<br /> Among mighty Śākya-born men of action, went forth into the wandering life, like bulls that had been startled by fire. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859822bi' class='paragraph'>
+							vijahus tu ye ’pi na gṛhāṇi tanayapitṛmātrapekṣayā |<br />te ’pi niyamavidhimāmaraṇāj jagṛhuś ca yuktamanasaś ca daghrire ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860906bi' class='paragraph'>
+							3.29 But even those who did not leave home, out of regard for children or father or mother: <br />They also, until their death, embraced the preventive rule and, with ready minds, they held to it:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859823bi' class='paragraph'>
+							na jihiṃsa sūkṣmam api jantum api paravadhopajīvanaḥ |<br />kiṃ bata vipulaguñaḥ kulajaḥ sadayaḥ sadā kimu muner upāsayā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860907bi' class='paragraph'>
+							3.30 No living creature, no matter how small, was subjected to violence, even by a person who killed for a living, <br /> Still less by a man of great virtue, good family and unfailing gentleness – and how much less by a servant of the Sage?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859824bi' class='paragraph'>
+							akṛśodhyamaḥ kṛśadhano ’pi paraparibhavāsaho ’pi san |<br />nānyadhanam apajahāra tathā bhujagād ivānyavibhavād dhi vivyathe ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860908bi' class='paragraph'>
+							3.31 The man not shy of hard work and yet still short of money, though he could not bear the other’s slights, <br /> Did not, even so, carry off the other’s goods; for he shrank from others’ riches as from a snake.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859825bi' class='paragraph'>
+							vibhavānvito ’pi taruṇo ’pi viṣayacapalendriyo ’pi san |<br />naiva ca parayuvatīr agamat paramaṃ hi tā dhanato ’py amanyata ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860909bi' class='paragraph'>
+							3.32 Even the man of money and youth with senses excited by objects of his affection –<br /> Even he never approached others’ wives, for he deemed them to be more dangerous than a burning fire. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859826bi' class='paragraph'>
+							anṛtaṃ jagāda na ca kaś cid ṛtam api jajalpa nāpriyam |<br />ślakṣṇam api ca na jagāv ahitaṃ hitam apy uvāca na ca paiśunāya yat ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860910bi' class='paragraph'>
+							3.33 Nobody told an untruth, nor made true but nasty gossip,<br /> Nor crooned slick but malicious words, nor spoke kindly words that had a backbiting motive&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859827bi' class='paragraph'>
+							manasā lulobha na ca jātu paravasuṣu gṛddhamānasaḥ |<br />kāmasukham asukhato vimṛśan vijahāra tṛpta iva tatra sajjanaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860911bi' class='paragraph'>
+							3.34 No greedy-minded person, in his heart, had any designs on the treasures of others; <br /> Seeing sensual happiness to be no happiness, the wise went freely on their way, as if satisfied in that area already.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859828bi' class='paragraph'>
+							na parasya kaś cid apaghātam api ca sgṛṇo vyacintayat |<br />mātṛpiṛsutasuhṛsadṛśaṃ sa dadarśa tatra hi paras paraṃ janaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860912bi' class='paragraph'>
+							3.35 Nobody showed any hostility towards the other; rather, they looked on others with positive warmth, <br /> As mother, father, child or friend: for each person there saw in the other himself.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859829bi' class='paragraph'>
+							niyataṃ bhaviṣyati paratra bhavad api ca bhūtam apy atho |<br />karmaphalam api ca lokagatir niyateti darśanam avāpa sādhu ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860913bi' class='paragraph'>
+							3.36 That the fruit of conduct, inevitably, will be realized in the future, is being realized now, and has been realized in the past; <br /> And that thus is determined how one fares in the world: this is an insight that, again, each experienced unerringly.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859830bi' class='paragraph'>
+							iti karmañā daśavidhena paramakuśalena bhūriṇā |<br />bhraṃśini śitahilaguṇo ’pi yuge vijahāra tatra munsaṃśrayaj janaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860914bi' class='paragraph'>
+							3.37 By this most skillful and powerful tenfold means, by the means of their conduct, <br /> Although virtue was lax in a declining age, the people there, with the Sage’s help, fared well&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859831bi' class='paragraph'>
+							na ca tatra kaś cid upapattisukham abhilalāṣa tair guṇaiḥ |<br />sarvam aśivam avagamya bhavaṃ bhavasaṃkṣayāya vavṛte na janmane ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860915bi' class='paragraph'>
+							3.38 But nobody there, because of his virtues, expected happiness in a resulting birth; <br /> Having learned that all becoming is pernicious, people worked to eradicate becoming, not to become something. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859832bi' class='paragraph'>
+							akathaṅkathā gṛhiṇa eva paramapariśuddhadṛṣtayaḥ |<br />srotasi hi vavṛtire bahavo rajasas tanutvam api cakrire pare ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860916bi' class='paragraph'>
+							3.39 Even householders were free from endless doubting, their views washed spotlessly away: <br />For many had entered the stream, and others had reduced the passions to a trickle.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859833bi' class='paragraph'>
+							vavṛte ’tra yo ’pi viṣameṣu vibhavadṛśeṣu kaś cana |<br />tyāgavinayaniyamābhirato vijahāra so ’pi na cacāla satpathāt ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860917bi' class='paragraph'>
+							3.40 Even one there who had been given over to ends like wealth <br />Was now content with free giving, discipline, and restraint: he also fared well, not straying from the true path.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859834bi' class='paragraph'>
+							api ca svato ’pi parato ’pi na bhayam abhavan na daivataḥ |<br />tatra ca susukhasubhikṣaguṇair jahṛṣuḥ prajāḥ kṛtayuge manor iva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860918bi' class='paragraph'>
+							3.41 Neither from within the self, nor from without, did any terror arise; nor from fate. <br /> By dint of their true happiness and material plenty and practical merits, the citizens there rejoiced as in the golden age of Manu.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859835bi' class='paragraph'>
+							iti muditam anāmayaṃ nirāpat kururaghupurupuropamaṃ puraṃ tat |<br />abhavad abhayadaiśike maharṣau viharati tatra śivāya vītarāge ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860919bi' class='paragraph'>
+							3.42 Thus exulting in freedom from disease and calamity, that city was the equal of Kuru, Raghu and Pūru, <br /> With the great dispassionate Seer serving there, for the good of all, as a guide to peace. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4859836bi' class='paragraph'>
+							iti saundaranande mahākavye tathāgatavarṇano nāma tṛtīyaḥ sargaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4859794";
+							kilderef = "Saund San: Johnston (1928) 3.1 - San: Johnston (1928) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4860920bi' class='paragraph'>
+							The 3rd Canto in the epic poem Handsome Nanda, titled “A Portrait of the Tathāgata.”&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4860878";
+							kilderef = "Saund Eng: Cross (2015)  - Eng: Cross (2015) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'></div><div class='textvar' style='width:49%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=1b55a037-b346-11e5-99e8-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

@@ -1,0 +1,559 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=560' accesskey='1'>Aśvaghoṣa: Saundarananda</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Aśvaghoṣa: Saundarananda<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3628]" value="3628" id="lancheckbox" checked >Sanskrit: San: Johnston (1928)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3629]" value="3629" id="lancheckbox" checked >English: Eng: Cross (2015)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='560'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v560">Search in Aśvaghoṣa: Saundarananda</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=560'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=560'>Aśvaghoṣa: Saundarananda</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="61071.CANTOI:Kapilavāstuvarṇana|61072.CANTOII:Rājavarṇana|61073.CANTOIII:Tathāgatavarṇana|61074.CANTOIV:Bhāryāyācitaka|61075.CANTOV:Nandapravrājana|61076.CANTOVI:Bhāryāvilāpa|61077.CANTOVII:Nandivilāpa|61078.CANTOVIII:Strīvighāta|61079.CANTOIX:Madāpavāda|61080.CANTOX:Svarganidarśana|61081.CANTOXI:Svargāpavāda|61082.CANTOXII:Paryavamarśa|61083.CANTOXIII:Śīlendriyajaya|61084.CANTOXIV:Ādiprasthāno|61085.CANTOXV:Vitarkaprahāṇa|61086.CANTOXVI:Āryasatyavyākhyāna|61087.CANTOXVII:Amṛtādhigama|61088.CANTOXVIII:Ājñāvyākaraṇa|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61071.CANTOI:Kapilavāstuvarṇana" border=0 hspace=2><a id="href_61071.CANTOI:Kapilavāstuvarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050055&level=1&cid=548072" class="ajax_tree0">CANTO I: Kapilavāstuvarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61072.CANTOII:Rājavarṇana" border=0 hspace=2><a id="href_61072.CANTOII:Rājavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050118&level=1&cid=548135" class="ajax_tree0">CANTO II: Rājavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61073.CANTOIII:Tathāgatavarṇana" border=0 hspace=2><a id="href_61073.CANTOIII:Tathāgatavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050184&level=1&cid=548201" class="ajax_tree0">CANTO III: Tathāgatavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61074.CANTOIV:Bhāryāyācitaka" border=0 hspace=2><a id="href_61074.CANTOIV:Bhāryāyācitaka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050227&level=1&cid=548244" class="ajax_tree0">CANTO IV: Bhāryāyācitaka
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61075.CANTOV:Nandapravrājana" border=0 hspace=2><a id="href_61075.CANTOV:Nandapravrājana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050274&level=1&cid=548291" class="ajax_tree0">CANTO V: Nandapravrājana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61076.CANTOVI:Bhāryāvilāpa" border=0 hspace=2><a id="href_61076.CANTOVI:Bhāryāvilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050328&level=1&cid=548345" class="ajax_tree0">CANTO VI: Bhāryāvilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61077.CANTOVII:Nandivilāpa" border=0 hspace=2><a id="href_61077.CANTOVII:Nandivilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050378&level=1&cid=548395" class="ajax_tree0">CANTO VII: Nandivilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61078.CANTOVIII:Strīvighāta" border=0 hspace=2><a id="href_61078.CANTOVIII:Strīvighāta" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050431&level=1&cid=548448" class="ajax_tree0">CANTO VIII: Strīvighāta
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61079.CANTOIX:Madāpavāda" border=0 hspace=2><a id="href_61079.CANTOIX:Madāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050494&level=1&cid=548511" class="ajax_tree0">CANTO IX: Madāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61080.CANTOX:Svarganidarśana" border=0 hspace=2><a id="href_61080.CANTOX:Svarganidarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050546&level=1&cid=548563" class="ajax_tree0">CANTO X: Svarganidarśana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61081.CANTOXI:Svargāpavāda" border=0 hspace=2><a id="href_61081.CANTOXI:Svargāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050611&level=1&cid=548628" class="ajax_tree0">CANTO XI: Svargāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61082.CANTOXII:Paryavamarśa" border=0 hspace=2><a id="href_61082.CANTOXII:Paryavamarśa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050674&level=1&cid=548691" class="ajax_tree0">CANTO XII: Paryavamarśa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61083.CANTOXIII:Śīlendriyajaya" border=0 hspace=2><a id="href_61083.CANTOXIII:Śīlendriyajaya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050718&level=1&cid=548735" class="ajax_tree0">CANTO XIII: Śīlendriyajaya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61084.CANTOXIV:Ādiprasthāno" border=0 hspace=2><a id="href_61084.CANTOXIV:Ādiprasthāno" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050775&level=1&cid=548792" class="ajax_tree0">CANTO XIV: Ādiprasthāno
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61085.CANTOXV:Vitarkaprahāṇa" border=0 hspace=2><a id="href_61085.CANTOXV:Vitarkaprahāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050828&level=1&cid=548845" class="ajax_tree0">CANTO XV: Vitarkaprahāṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61086.CANTOXVI:Āryasatyavyākhyāna" border=0 hspace=2><a id="href_61086.CANTOXVI:Āryasatyavyākhyāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050898&level=1&cid=548915" class="ajax_tree0">CANTO XVI: Āryasatyavyākhyāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61087.CANTOXVII:Amṛtādhigama" border=0 hspace=2><a id="href_61087.CANTOXVII:Amṛtādhigama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050997&level=1&cid=549014" class="ajax_tree0">CANTO XVII: Amṛtādhigama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61088.CANTOXVIII:Ājñāvyākaraṇa" border=0 hspace=2><a id="href_61088.CANTOXVIII:Ājñāvyākaraṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1051071&level=1&cid=549088" class="ajax_tree0">CANTO XVIII: Ājñāvyākaraṇa
+</td></tr></table>
+<script language=javascript>test('61086.CANTOXVI:Āryasatyavyākhyāna|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=560&amp;mid=1050898&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548915&amp;mid=1050898&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548915&amp;mid=1050898&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><div class='kilderef' id='4860508'></div><div class='clear'></div><span id='4860508bi' class='paragraph'>
+							evaṃ manodhāraṇayā krameṇa vyapohya kiṃ cit samupohya kiṃ cit |<br />dhyānāni catvāry adhigamya yogī prāpnoty abhijñā niyamena pañca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><div class='kilderef' id='4861592'></div><div class='clear'></div><span id='4861592bi' class='paragraph'>
+							16.1 Thus, by methodically taking possession of the mind, getting rid of something and gathering something together, <br /> The practitioner makes the four dhyānas his own, and duly acquires the five powers of knowing: &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860509bi' class='paragraph'>
+							ṛddhipravekaṃ ca bahuprakāraṃ parasya cetaś caritāvabodham |<br />atītajanmasmaraṇaṃ ca dīrghaṃ divye viśuddhe śruticakṣuṣī ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861593bi' class='paragraph'>
+							16.2 The principal transcendent power, taking many forms; then being awake to what others are thinking; <br /> And remembering past lives from long ago; and divine lucidity of ear; and of eye. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860510bi' class='paragraph'>
+							ataḥparaṃ tattvaparīkṣaṇena mano dadhāty āsravasaṃkṣayāya |<br />tato hi duḥkhaprabhṛtīni samyak catvāri satyāni padāny avaiti ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861594bi' class='paragraph'>
+							16.3 From then on, through investigation of what is, he applies his mind to eradicating the polluting influences, <br /> For on this basis he fully understands suffering and the rest, the four true standpoints:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860511bi' class='paragraph'>
+							bādhātmakaṃ duḥkham idaṃ prasaktaṃ duḥkhasya hetuḥ prabhavātmako ’yam |<br />duḥkhakṣayo niḥsaraṇātmako ’yaṃ trāṇātmako ’yaṃ praśamāya mārgaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861595bi' class='paragraph'>
+							16.4 This is suffering, which is constant and akin to trouble; this is the cause of suffering, akin to starting it; <br /> This is cessation of suffering, akin to walking away. And this, akin to a refuge, is a peaceable path.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860512bi' class='paragraph'>
+							ity āryasaryāny avabudhya buddhyā catvāri samyak pratividhya caiva |<br />sarvāsravān bhāvanayābhibhūya na jāyate śāntim avāpya bhūyaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861596bi' class='paragraph'>
+							16.5 Understanding these noble truths, by a process of reasoning, while getting to know the four as one, <br /> He prevails over all pollutants, by the means of mental development, and, on finding peace, is no longer subject to becoming.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860513bi' class='paragraph'>
+							abodhato hy aprativedhataś ca tattvātmakasyāsya catuṣṭayasya |<br />bhāvad bhavaṃ yāti na śāntim eti saṃsāradolām adhiruhya lokaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861597bi' class='paragraph'>
+							16.6 For by failing to wake up and come round to this four, whose substance is the reality of what is, <br /> Humankind goes from existence to existence without finding peace, hoisted in the swing of saṁsāra. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860514bi' class='paragraph'>
+							tasmāj jarāder vyasanasya mūlaṃ samāsato duḥkham avaihi janma |<br />sarvauṣadhīnām iva bhūr bhavāya sarvāpadāṃ kṣetram idaṃ hi janma ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861598bi' class='paragraph'>
+							16.7 Therefore, at the root of a tragedy like growing old, see, in short, that birth is suffering. <br /> For, as the earth supports the life of all plants, this birth is the field of all troubles.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860515bi' class='paragraph'>
+							yaj janma rūpasya hi sendriyasya duḥkhasya tan naikavidhasya janma |<br />yaḥ saṃbhavaś cāsya samucchrayasya mṛtyoṣ ca rogasya ca saṃbhavaḥ saḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861599bi' class='paragraph'>
+							16.8 The birth of a sentient bodily form, again, is the birth of suffering in all its varieties; <br /> And he who begets such an outgrowth is the begetter of death and of disease. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860516bi' class='paragraph'>
+							sad vāpy asad vā viṣamiṣram annaṃ yathā vināśāya na dhāraṇāya |<br />loke tathā tiryag uparyadho vā duḥkhāya sarvaṃ na sukḥāya janma ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861600bi' class='paragraph'>
+							16.9 Good food or bad food, if mixed with poison, makes for ruin and not for sustenance. <br /> Likewise, whether in a world on the flat or above or below, all birth makes for hardship and not for ease. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860517bi' class='paragraph'>
+							jarādayo naikavidhā parajānāṃ satyāṃ pravṛttau prabhavanty anarthāḥ |<br />pravātsu ghoeṣv api māruteṣu na hy aprasūtās taravaś calanti ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861601bi' class='paragraph'>
+							16.10 The many and various disappointments of men, like old age, occur as long as their doing goes on. <br /> (For, even when violent winds blow, trees do not shake that never sprouted.)&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860518bi' class='paragraph'>
+							ākāsayoniḥ pavano yathā hi yathā śamīgarbhaśayo hutāśaḥ |<br />āpo yathāntarvasudhāśayāś ca duḥkhaṃ tathā cittaśarīrayoni ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861602bi' class='paragraph'>
+							16.11 As wind is born from the air, as fire sleeps in the womb of śamī wood, <br /> And as water gestates inside the earth, so does suffering spring from an expectant mind-and-body. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860519bi' class='paragraph'>
+							apāṃ dravatvaṃ kaṭhinatvam urvyā vāyoś calatvaṃ dhruvam auṣṇyam agneḥ |<br />yathā svabhāvo hi tathā svabhāvo duḥkhaṃ śarīrasya ca cetasaś ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861603bi' class='paragraph'>
+							16.12 The fluidity of water, the solidity of earth, the motion of wind, and the constant heat of fire <br /> Are innate in them; as also it is in the nature of both the body and the mind to suffer. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860520bi' class='paragraph'>
+							kāye sati vyādhijarādi duḥkhaṃ kṣuttarṣavarṣoṣṇahimādi caiva |<br />rupāśrite cetasi sānubandhe śokāratikrodhabhayādi duḥkham ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861604bi' class='paragraph'>
+							16.13 Insofar as there is a body, there is the suffering of sickness, aging and so on; and also of hunger and thirst, and of the rains, and summer heat and winter cold. <br /> Insofar as a mind is bonded, tied to phenomena, there is the suffering of grief, discontent, anger, fear and so on.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860521bi' class='paragraph'>
+							pratyakṣam ālokya ca janmaduḥkhaṃ duḥkhaṃ tathātītam apīti viddhi |<br />yathā ca tad duḥkham idaṃ ca duḥkhaṃ duḥkhaṃ tathānāgatam apy avehi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861605bi' class='paragraph'>
+							16.14 Seeing now before your eyes that birth is suffering, recognise that likewise in the past it was suffering. <br /> And just as that was suffering and this is suffering, know that likewise in the future it will be suffering. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860522bi' class='paragraph'>
+							bījasvabhāvo hi yatheha dṛṣṭo bhūto ’pi bhavyo ’pi tathānumeyaḥ |<br />pratyakṣataś ca jvalano yathoṣṇo bhūto ’pi bhavyo ’pi tathoṣṇa eva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861606bi' class='paragraph'>
+							16.15 For just as it is evident to us now what kind of thing a seed is, we can infer that it was so in the past and that it will be so in the future. <br /> And just as fire burning before us is hot, so was it hot and so will it be hot. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860523bi' class='paragraph'>
+							tan nāmarūpasya guṇānurūpaṃ yatraiva nirvṛtti udāravṛtta |<br />tatraiva duḥkhaṃ na hi tadvimuktaṃ duḥkhaṃ bhaviṣyaty abhavad bhaved vā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861607bi' class='paragraph'>
+							16.16 In conformity with its kind, then, psycho-physicality develops, wherein, O man of noble conduct, <br /> Suffering exists, right there – for nowhere else will suffering exist or has it existed or could it exist. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860524bi' class='paragraph'>
+							pravṛttiduḥkhasya ca tasya loke tṛṣṇādayo doṣagaṇā nimittam |<br />naiveṣvaro na prakṛtir na kālo nāpi svabhāvo na vidhir yadṛcchā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861608bi' class='paragraph'>
+							16.17 And this, the suffering of doing, in the world, has its cause in clusters of faults which start with thirsting – <br /> The cause is certainly not in God, nor in primordial matter, nor in time; nor either in the intrinsic existence of a thing, nor in predestination or self-will.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860525bi' class='paragraph'>
+							jñātavyam etena ca kāraṇena lokasya doṣebhya iti pravṛttiḥ |<br />yasmān mriyante sarajastamaskā na jāyate vītarajastmaskaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861609bi' class='paragraph'>
+							16.18 Again, you must understand how, due to this cause, because of men’s faults, the cycle of doing goes on, <br /> So that they succumb to death who are afflicted by the dust of the passions and by darkness; but he is not reborn who is free of dust and darkness. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860526bi' class='paragraph'>
+							icchāviṣeśe sati tatra tatra yānāsanāder bhavati prayogaḥ |<br />yasmād atas tarṣavaśāt tathaiva janma prajānām iti veditavyam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861610bi' class='paragraph'>
+							16.19 Insofar as the specific desire exists to do this or that, an action like going or sitting happens; <br /> Hence, in just the same way, by the force of their thirsting living creatures are reborn – as is to be observed: &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860527bi' class='paragraph'>
+							sattvāny abhiṣvaṅgavaśāni dṛṣṭvā svajātiṣu prītiparāṇy atīva |<br />abhyāsayogād upapāditāni tair eva doṣair iti tāni viddhi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861611bi' class='paragraph'>
+							16.20 See sentient beings in the grip of attachment, dead set on pleasure among their own kind; <br /> And, from their habitual practice of faults, observe them presenting with those very faults&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860528bi' class='paragraph'>
+							krodhapraharṣādibhir āśrayāṇām utpadyate ceha yathā viśeṣaḥ |<br />tathaiva janmasv api naikarūpo nirvartate kleśakṛto viśeṣaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861612bi' class='paragraph'>
+							16.21 Just as the anger, lust, and so on of sufferers of those afflictions give rise in the present to a personality trait, <br /> So too in new lives, in various manifestations, does the affliction-created trait develop: &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860529bi' class='paragraph'>
+							doṣādhike janmani tīvradoṣa utpadyate rāgiṇi tīvrarāgaḥ |<br />mohādhike mohabalādhikaś ca tadalpadoṣe ca tadalpadoṣaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861613bi' class='paragraph'>
+							16.22 In a life dominated by anger arises violent anger, in the lover of passion arises burning passion, <br /> And in one dominated by ignorance arises overwhelming ignorance. In one who has a lesser fault, again, the lesser fault develops. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860530bi' class='paragraph'>
+							phalaṃ hi yādṛk samavaiti sākṣāt tadāgamād bījam avaity atītam |<br />avetya bījaprakṛtiṃ ca sākṣād anāgataṃ tatphalam abhyupaiti ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861614bi' class='paragraph'>
+							16.23 Seeing what kind of fruit is before one’s eyes, one knows it was that kind of seed in the past. <br />And having identified a seed before one’s eyes, one knows the fruit it may be in the future.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860531bi' class='paragraph'>
+							doṣakṣayo jātiṣu yāsu yasya vairāgyatas tāsu na jāyate saḥ |<br />doṣāśayas tiṣṭhati yasya yatra tasyopapattir vivaśasya tatra ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861615bi' class='paragraph'>
+							16.24 In whichever realms of existence a man has ended faults, thanks to that dispassion he is not born in those realms. <br /> Wherever he remains susceptible to a fault, that is where he makes his appearance, whether he likes it or not.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860532bi' class='paragraph'>
+							taj janmano naikavidhasya saumya tṛṣṇādayo hetava ity avetya |<br />tāṃś chindhi duḥkhād yadi nirmumukṣā kāryakṣayaḥ kāraṇasaṃkṣayād dhi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861616bi' class='paragraph'>
+							16.25 So my friend, with regard to the many forms of becoming, know their causes to be [the faults] that start with thirsting <br /> And cut out those [faults], if you wish to be freed from suffering; for ending of the effect follows from eradication of the cause.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860533bi' class='paragraph'>
+							duḥkhakṣayo hetuparikṣayāc ca śāntanaṃ śivaṃ sākṣikuruṣva dharmam |<br />tṛṣṇāvirāgaṃ layanaṃ nirdohaṃ sanātanaṃ trāṇam ahāryam āryam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861617bi' class='paragraph'>
+							16.26 Again, the ending of suffering follows from the disappearance of its cause. Experience that reality for yourself as peace and well-being, <br /> A place of rest, a cessation, an absence of the red taint of thirsting, a primeval refuge which is irremovable and noble, &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860534bi' class='paragraph'>
+							yasmin na jātir na jarā na mṛtyur na vyādhayo nāpriyasaṃprayogaḥ |<br />necchāvipanna priyaviprayogaḥ kṣemaṃ padaṃ naiṣṭhikam acyutaṃ tat ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861618bi' class='paragraph'>
+							16.27 In which there is no being born, no aging, no dying, no illness, no being touched by unpleasantness, <br /> No disappointment, and no separation from what is pleasant: It is an ultimate and indestructible step, in which to dwell at ease.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860535bi' class='paragraph'>
+							dīpo yathā nirvṛtim abhyupeto naivāvaniṃ gacchati nānatarikṣam |<br />diśaṃ na kāṃ cid vidiṣaṃ na kāṃ cit snehakṣayāt kevalam eti śāntim ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861619bi' class='paragraph'>
+							16.28 A lamp that has gone out reaches neither to the earth nor to the sky, <br /> Nor to any cardinal nor to any intermediate point: because its oil is spent it reaches nothing but extinction. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860536bi' class='paragraph'>
+							evaṃ kṛtī nirvṛtim abhyupeto naivāvaniṃ gacchati nāntarikṣam |<br />diśaṃ na kāṃ cid vidiśaṃ na kāṃ cit kleśakṣayāt kevalam eti sāntim ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861620bi' class='paragraph'>
+							16.29 In the same way, a man of action who has come to quiet reaches neither to the earth nor to the sky, <br /> Nor to any cardinal nor to any intermediate point: from the ending of his afflictions he attains nothing but extinction.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860537bi' class='paragraph'>
+							asyābhyupāyo ’dhingamāya mārgaḥ prajñātrikalpaḥ praśamadvikalpaḥ |<br />sa bhāvanīyo vidhivad budhena śīle śucau tripamukhe sthitena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861621bi' class='paragraph'>
+							16.30 A means for gaining that end is the path of threefold wisdom and twofold tranquillity. <br />It is to be cultivated by a wakeful person working to principle – abiding in untainted threefold integrity. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860538bi' class='paragraph'>
+							vākkarma samyak sahakāyakarma yathāvad ājīvanayaś ca śuddhaḥ |<br />idaṃ trayaṃ vṛttavidhau pravṛttaṃ śīlāśrayaṃ karmaparigrahāya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861622bi' class='paragraph'>
+							16.31 Using the voice well and the body well in tandem, and making a clean living in a suitable manner: <br /> These three, pertaining to conduct, are for the mastery, based on integrity, of one’s dharma-duty.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860539bi' class='paragraph'>
+							satyeṣu duḥkhādiṣu dṛṣṭir āryā samyagvitarkaś ca parākramaś ca |<br />idaṃ trayaṃ jñānavidhau pravṛttaṃ prajñāśrayaṃ kleśaparikṣayāya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861623bi' class='paragraph'>
+							16.32 Noble insight into suffering and the other truths, along with thinking straight, and initiative: <br /> These three, pertaining to know-how, are for dissolution, based on wisdom, of the afflictions.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860540bi' class='paragraph'>
+							nyāyena satyādhigamāya yuktā samyak smṛtiḥ samyag atho samādhiḥ |<br />idaṃ dvayaṃ yogavidhau pravṛttaṃ śamāśrayaṃ cittaparigrahāya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861624bi' class='paragraph'>
+							16.33 True mindfulness, properly harnessed so as to bring one close to the truths; and true balance: <br />These two, pertaining to practice, are for mastery, based on tranquillity, of the mind. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860541bi' class='paragraph'>
+							kleśāṅkurān na pratanoti śīlaṃ bījāṅkurān kāla ivāvṛttaḥ |<br />śucau hi śīle puruṣasya doṣā manaḥ salajjā iva dharṣayanti ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861625bi' class='paragraph'>
+							16.34 Integrity no more propagates the shoots of affliction than a bygone spring propagates shoots from seeds. <br />The faults, as long as a man’s integrity is untainted, venture only timidly to attack his mind. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860542bi' class='paragraph'>
+							kleśāṃs tu viṣkambhayate samādhir vegān ivādrir mahaot nadīnām |<br />sthite samādhau hi na dharṣayanti doṣā bhujaṅgā iva mantrabaddhāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861626bi' class='paragraph'>
+							16.35 But balance casts off the afflictions like a mountain casts off the mighty torrents of rivers. <br /> The faults do not attack a man who is standing firm in balanced stillness: like charmed snakes, they are spellbound.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860543bi' class='paragraph'>
+							prajñā tv aśeṣeṇa nihanti doṣāṃs tīradrumān prāvṛṣi nimnageva |<br />dagdhā yayā na prabhavanti doṣā vajrāgninevānusṛtena vṛkṣāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861627bi' class='paragraph'>
+							16.36 And wisdom destroys the faults without trace, as a mountain stream in the monsoon destroys the trees on its banks. <br /> Faults consumed by it do not stand a chance, like trees in the fiery wake of a thunderbolt. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860544bi' class='paragraph'>
+							triskandham etaṃ pravigāhya mārgaṃ praspaṣṭam aṣṭāṅgam ahāryam āryam |<br />duḥkhasya hetūn prajahāti doṣān prāpnoti cātyantaśivaṃ padaṃ tat ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861628bi' class='paragraph'>
+							16.37 Giving oneself to this path with its three divisions and eight branches – this straightforward, irremovable, noble path – <br /> One abandons the faults, which are the causes of suffering, and comes to that step which is total well-being.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860545bi' class='paragraph'>
+							asyopacāre dhṛtir ārjavaṃ ca hrīr apramādaḥ praviviktatā ca |<br />alpecchatā tuṣṭir asaṃgatā ca lokapravṛttāv aratiḥ kṣamā ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861629bi' class='paragraph'>
+							16.38 Attendant on it are constancy and straightness; modesty, attentiveness, and reclusiveness; <br /> Wanting little, contentment, and freedom from forming attachments; no fondness for worldly activity, and forbearance. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860546bi' class='paragraph'>
+							yāthātmyato vindati yo hi duḥkhaṃ tasyodbhavaṃ tasya ca yo nirdodham |<br />āryeṇa mārgeṇa sa sāntim eti kalyāṇamitraiḥ saha vartamānaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861630bi' class='paragraph'>
+							16.39 For he who knows suffering as it really is, who knows its starting and its stopping: <br /> It is he who reaches peace by the noble path – going along with friends in the good.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860547bi' class='paragraph'>
+							yo vyādhito vyādhim avaiti samyag vyādher nidānaṃ ca tadauṣadhaṃ ca |<br />ārogyam āpnoti hi so ’cireṇa mitrair abhijñair upacaryamāṇaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861631bi' class='paragraph'>
+							16.40 He who fully appreciates his illness, as the illness it is, who sees the cause of the illness and its remedy: <br /> It is he who wins, before long, freedom from disease – attended by friends in the know. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860548bi' class='paragraph'>
+							tad vyādhisaṃjñāṃ kuru duḥkhasatye doṣeṣv api vyādhinidānasaṃjñām |<br />ārogyasaṃjñāṃ ca nirdohasatye bhaiṣajyasaṃjñām api mārgasatye ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861632bi' class='paragraph'>
+							16.41 So with regard to the truth of suffering, see suffering as an illness; with regard to the faults, see the faults as the cause of the illness; <br /> With regard to the truth of stopping, see stopping as freedom from disease; and with regard to the truth of a path, see a path as a remedy.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860549bi' class='paragraph'>
+							tasmāt pravṛttiṃ parigaccha duḥkhaṃ pravartakān apy avagaccha doṣān |<br />nivṛttim āgaccha ca tannirodhaṃ nivartakaṃ cāpy avagaccha mārgam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861633bi' class='paragraph'>
+							16.42 Comprehend, therefore, that suffering is doing; witness the faults impelling it forward; <br /> Realise its stopping as non-doing; and know the path as a turning back. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860550bi' class='paragraph'>
+							śirasy atho vāsasi saṃpradīpte satyāvabodhāya matir vicāryā |<br />dagdhaṃ jagat satyanayaṃ hy adṛṣṭvā pradahyate saṃprati dhakṣyate ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861634bi' class='paragraph'>
+							16.43 Though your head and clothes be on fire direct your mind so as to be awake to the truths. <br /> For in failing to see the purport of the truths, the world has burned, it is burning now, and it will burn. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860551bi' class='paragraph'>
+							yadaiva yaḥ paśyati nāmarūpaṃ kṣayīti taddarśanam asya samyak |<br />samyak ca nirvedam upaiti paśyān nandīkṣayāc ca kṣayam eti rāgaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861635bi' class='paragraph'>
+							16.44 When a man sees psycho-physicality as subject to dissolution, that insight of his is accurate; <br /> In seeing accurately he is disenchanted, and from the ending of exuberance ends the red taint of passion. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860552bi' class='paragraph'>
+							tayoś ca nandīrajasoḥ kṣayeṇa samyag vimuktaṃ pravadāmi cetaḥ |<br />samyag vimuktir manasaś ca tābhyāṃ na cāsya bhūyaḥ karaṇīyam asti ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861636bi' class='paragraph'>
+							16.45 By the ending of the duality which is exuberance and gloom, I submit, his mind is fully set free. <br /> And when his mind is fully liberated from that duality, there is nothing further for him to do. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860553bi' class='paragraph'>
+							yathāsvabhāvena hi nāmarūpaṃ tad dhetum evāstagamaṃ ca tasya |<br />vijānataḥ paśyata eva cāhaṃ bravīmi samyak kṣayam āsravāṇām ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861637bi' class='paragraph'>
+							16.46 For in him who sees psycho-physicality as it is, and who sees its origin and passing away, <br /> From the very fact of his knowing and seeing, I predict the complete eradication of the pollutants. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860554bi' class='paragraph'>
+							tasmāt paraṃ saumya vidhāya vīryaṃ śīghraṃ ghaṭasv āsravasaṃkṣayāya |<br />duḥkhān anityāṃś ca nirātmakāṃś ca dhātūn viśeṣeṇa parīkṣamāṇāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861638bi' class='paragraph'>
+							16.47 So my friend garner your energy greatly and strive quickly to put an end to polluting influences, <br /> Examining in particular the elements – as suffering, as impermanent and as devoid of self.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860555bi' class='paragraph'>
+							dhātūn hi ṣaḍ bhūsalilānalādīn sāmānyataḥ svena ca lakṣaṇena |<br />avaiti yo nānyam avaiti tebhyaḥ so ’tyantikaṃ mokṣam avaiti tebhyaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861639bi' class='paragraph'>
+							16.48 For in knowing the six elements of earth, water, fire and the rest, generically, and each as specific to itself, <br /> He who knows nothing else but those elements, knows total release from those elements. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860556bi' class='paragraph'>
+							kleśaprahāṇāya ca niścitena kālo ’bhyupāyaś ca parīkṣitavyaḥ |<br />yogo ’py akāle hy anupāyataś ca bhavaty anarthāya na tadguṇāya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861640bi' class='paragraph'>
+							16.49 One set on abandoning the afflictions, then, should attend to timing and method; <br /> For even practice itself, done at the wrong time and relying on wrong means, makes for disappointment and not for the desired end.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860557bi' class='paragraph'>
+							ajātavatsāṃ yadi gāṃ duhīta naivāptuyāt kṣīram akāladohī |<br />kāle ’pi vā syān na payo labheta mohena śṛṅgād yadi gāṃ duhīta ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861641bi' class='paragraph'>
+							16.50 If a cow is milked before her calf is born, milking at the wrong time will yield no milk. <br /> Or even at the right time no milk will be got if, through ignorance, a cow is milked by the horn.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860558bi' class='paragraph'>
+							ārdrāc ca kāṣṭhā jvalanābhikāmo naiva prayatnād api vahnim ṛcchet |<br />kāṣṭhāc ca śuṣkād api pātganena naivāgnim āpnoty anupāapūrvam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861642bi' class='paragraph'>
+							16.51 Again, one who wants fire from damp wood, try as he might, will not get fire. <br /> And even if he lays down dry wood, he won’t get fire from that, with bad bushcraft.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860559bi' class='paragraph'>
+							tad deśakālau vidhivat parīkṣya yogasya mātrām api cābhyupāyam |<br />balābale cātmani saṃpradhārya kāryāḥ prayatno na tu tadviruddhaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861643bi' class='paragraph'>
+							16.52 Having given due consideration to the time and place as well as to the extent and method of one’s practice, <br /> One should, reflecting on one’s own strength and weakness, persist in an effort that is not inconsistent with them.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860560bi' class='paragraph'>
+							pragrāhakaṃ yat tu nimittam uktam uddanyamāne hṛdi tan na sevyam |<br />evaṃ hi cittaṃ praśamaṃ na yāti [na vahri] nā vahnir iveryamāṇaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861644bi' class='paragraph'>
+							16.53 That factor said to be “garnering” does not serve when the emotions are inflamed, <br /> For thus the mind does not come to quiet, like a fire being fanned by the wind.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860561bi' class='paragraph'>
+							śamāya yat syān niyataṃ nimittaṃ jātoddhave cetasi tasya kālaḥ |<br />evaṃ hi cittaṃ praśamaṃ niyacchet pradīpyamāno ’gnir ivodakena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861645bi' class='paragraph'>
+							16.54 A factor ascertained to be calming has its time when one’s mind is excited; <br />For thus the mind subsides into quietness, like a blazing fire [doused] with water. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860562bi' class='paragraph'>
+							śamāvahaṃ yan niyataṃ nimittaṃ sevyaṃ na tac cetasi līyamāne |<br />evaṃ hi bhūyo layameti cittam anīryamāṇo ’gnir ivālpasāraḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861646bi' class='paragraph'>
+							16.55 A factor ascertained to bring calm does not serve when one’s mind is dormant; <br /> For thus the mind sinks further into lifelessness, like a feeble fire left unfanned. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860563bi' class='paragraph'>
+							pragrāhakaṃ yan niyataṃ nimittaṃ layaṃ gate cetasi tasya kālaḥ |<br />kriyāsamarthaṃ hi manas tathā syān mandāyamāno ’gnir ivendhanena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861647bi' class='paragraph'>
+							16.56 A factor determined to be garnering, has its time when one’s mind is lifeless, <br /> For thus the mind becomes fit for work, like a feebly-burning fire [plied] with fuel.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860564bi' class='paragraph'>
+							aupekṣikaṃ nāpi nimittam iṣṭaṃ layaṃ gate cetasi soddhave vā |<br />evaṃ hi tīvraṃ janayed anartham upekṣito vyādhir ivāturasya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861648bi' class='paragraph'>
+							16.57 Nor is equanimity a valid factor when one’s mind is either lifeless or excited. <br /> For that might engender severe adversity, like the neglected illness of a sick man. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860565bi' class='paragraph'>
+							yat syād upekṣāniyataṃ nimittaṃ sāmyaṃ gate cetasi tasya kālaḥ |<br />evaṃ hi kṛtyāya bhavet prayogo ratho vidheyāśva iva prayātaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861649bi' class='paragraph'>
+							16.58 A factor ascertained to conduce to equanimity has its time when one’s mind is in its normal state; <br /> For thus one may set about work to be done, like a wagon setting off with well-trained horses. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860566bi' class='paragraph'>
+							rāgoddhavyākulite ’pi citte maitropasaṃhāravidhir na kāryaḥ |<br />rāgātmako muhyati maitrayā hi senhaṃ kaphakṣobha ivopayujya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861650bi' class='paragraph'>
+							16.59 Again, when the mind is filled with the red joys of passion, direction towards oneself of loving-kindness is not to be practised; <br /> For a passionate type is stupefied by love, like a sufferer from phlegm taking oil.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860567bi' class='paragraph'>
+							rāgoddhate cetasi dhairyam etya niṣevitavyaṃ tv aśubhaṃ nimittam |<br />rāgātmako hy evam upaiti śarma kaphātmako rūkṣam ivopayujya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861651bi' class='paragraph'>
+							16.60 Steadiness lies, when the mind is excited by ardour, in resorting to an unpleasant factor; <br /> For thus a passionate type obtains relief, like a phlegmatic type taking an astringent.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860568bi' class='paragraph'>
+							vyāpādadoṣeṇa manasy udīrṇe na sevitavyaṃ tv aśubhaṃ nimittam |<br />dveṣātmakasya hy aśubhā vadhāya pittātmanas śīta ivopacāraḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861652bi' class='paragraph'>
+							16.61 When the mind is wound up, however, with the fault of malice, unpleasantness is not the factor to be deployed; <br /> For unpleasantness is destructive to a hating type, as acid treatment is to a man of bilious nature.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860569bi' class='paragraph'>
+							vyāpādadoṣakṣubhite tu citte sevyā svapakṣopanayena maitrī |<br />dveṣātmano hi praśamāya maitrī pittātmanaḥ śīta ivopacarāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861653bi' class='paragraph'>
+							16.62 When the mind is agitated by the fault of malice, loving-kindness should be cultivated, by directing it towards oneself. <br />For loving-kindness is calming to a hate-afflicted soul, as cooling treatment is to the man of bilious nature. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860570bi' class='paragraph'>
+							mohānubaddhe manasaḥ pracāre maitrāśubhā caiva bhavaty ayogaḥ |<br />tābhyāṃ hi saṃmoham upaiti bhūyo vāyvātmako rūkṣam ivopanīya ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861654bi' class='paragraph'>
+							16.63 When there is wandering of the mind, tied to delusion, both loving-kindness and unpleasantness are unsuitable, <br /> For a deluded man is further deluded by these two, like a windy type given an astringent. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860571bi' class='paragraph'>
+							mohātmaikāyāṃ mansaḥ pravṛttau sevyas tv idaṃ pratyayatāvihāraḥ |<br />mūḍhe manasy eṣa hi śāntimārgo vāyvātmake snigdha ivopacāraḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861655bi' class='paragraph'>
+							16.64 When working of the mind is delusory, one should appreciate the causality therein; <br />For this is a path to peace when the mind is bewildered, like treating a wind condition with oil.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860572bi' class='paragraph'>
+							ulkāmukhastaṃ hi yathā suvarṇaṃ suvarṇakāro dhamatīha kāle |<br />kāle pariprokṣayate jalena krameṇa kāle samupekṣate ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861656bi' class='paragraph'>
+							16.65 Holding gold in the mouth of a furnace, a goldsmith in this world blows it at the proper time, <br /> Douses it with water at the proper time, and gradually, at the proper time, he leaves it be.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860573bi' class='paragraph'>
+							dahet suvarṇaṃ hi dhamann akāle jale kṣipan saṃśamayed akāle |<br />na cāpi samyak paripākam enaṃ nayed akāle samupekṣamāṇaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861657bi' class='paragraph'>
+							16.66 For he might burn the gold by blowing at the wrong time, he might make it unworkable by plunging it into water at the wrong time, <br /> And he would not bring it to full perfection if at the wrong time he were just to leave it be.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860574bi' class='paragraph'>
+							saṃpragrahasya praśamasya caiva tathaiva kāle samupekṣaṇasya |<br />samyaṅnimittaṃ manasā tv avekṣyaṃ nāśo hi yatno ’py anupāyapūrvaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861658bi' class='paragraph'>
+							16.67 Likewise, for garnering as also for calming, as also when appropriate for leaving well alone, <br /> One should readily attend to the appropriate factor; because even diligence is destructive when accompanied by a wrong approach.” &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860575bi' class='paragraph'>
+							ity evam anyāyanivartanaṃ ca nyāyaṃ ca tasmai sugato babhāṣe |<br />bhūyaś ca tat tac caritaṃ viditvā vitarkahānāya vidhīn uvāca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861659bi' class='paragraph'>
+							16.68 Thus, on retreat from muddling through, and on the principle to come back to, the One Who Went Well spoke to [Nanda]; <br /> And knowing the varieties of behaviour, he detailed further the directions for abandoning ideas.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860576bi' class='paragraph'>
+							yathā bhiṣak pittakaphānilānāṃ ya eva kopaṃ samupaiti doṣaḥ |<br />śamāya tasyaiva vidhatte vyadhatta doṣeṣu tathairva buddhaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861660bi' class='paragraph'>
+							16.69 Just as, for a disorder of bile, phlegm, or wind – for whatever disorder of the humours has manifested the symptoms of disease – <br /> A doctor prescribes a course of treatment to cure that very disorder; so did the Buddha prescribe for the faults: &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860577bi' class='paragraph'>
+							ekena kalpena sacen na hanyāt svabhyastabhāvād aśubhān vitarkān |<br />tato dvitīyaṃ kramam ārabheta na tv eva heyo guṇavān prayogaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861661bi' class='paragraph'>
+							16.70 “It may not be possible, following a single method, to kill off bad ideas that habit has so deeply entrenched; <br /> In that case, one should commit to a second course but never give up the good work.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860578bi' class='paragraph'>
+							anādikālopacitātmakatvād balīyasaḥ kleśagaṇasya caiva |<br />samyakprayogasya ca duṣkaratvāc chettuṃ na śakyāḥ sahasā hi doṣāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861662bi' class='paragraph'>
+							16.71 Because of the instinct-led accumulation, from time without beginning, of the powerful mass of afflictions, <br /> And because true practice is so difficult to do, the faults cannot be cut off all at once.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860579bi' class='paragraph'>
+							añvyā yathāṇyā vipulāṇir anyā nirvāhyate tadviduṣā nareṇa |<br />tadvad tad evākuśalaṃ nimittaṃ kṣipen nimittāntarasevanena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861663bi' class='paragraph'>
+							16.72 Just as a deep splinter, by means of the point of another sharp object, is removed by a man skilled in that task, <br /> Likewise an unpromising stimulus may be dispensed with through deployment of a different stimulus.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860580bi' class='paragraph'>
+							tathāpy athādhyātmanavagrahatvān naivopaśāmyed aśubho vitarkaḥ |<br />heyaḥ sa taddoṣaparīkṣaṇena saśvāpado mārga ivādhvagena ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861664bi' class='paragraph'>
+							16.73 There again, because of your personal inexperience, a bad idea might not give way. <br /> You should abandon it by observing the fault in it, as a traveller abandons a path on which there is a wild beast. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860581bi' class='paragraph'>
+							yathā kṣudhārto ’pi viṣeṇa pṛktaṃ jijīviṣur necchati bhoktum annam |<br />tathaiva doṣāvaham ity avetya jahāti vidvān aśubhaṃ nimittam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861665bi' class='paragraph'>
+							16.74 A man who wishes to live, even when starving, declines to eat poisoned food. <br /> Likewise, observing that it brings with it a fault, a wise person leaves alone an unpleasant stimulus.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860582bi' class='paragraph'>
+							na doṣataḥ paśyati yo hi doṣaṃ kas taṃ tato vārayituṃ samarthaḥ |<br />guṇaṃ guṇe paśyati yaś ca yantra sa vāryamāṇo ’pi tataḥ prayāti ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861666bi' class='paragraph'>
+							16.75 When a man does not see a fault as a fault, who is able to restrain him from it? <br /> But when a man sees the good in what is good, he goes towards it despite being restrained.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860583bi' class='paragraph'>
+							vyapatrapante hi kulaprasūtā mahaḥpracārair aśubhaiḥ pravṛttaiḥ |<br />kaṇṭhe manasvīva yuvā vapuṣmān acākṣuṣair aprayatair viṣaktaiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861667bi' class='paragraph'>
+							16.76 For those born into a noble house are ashamed of unpleasant occurrences going on in the mind, <br /> As one who is bright, young and good-looking is ashamed of unsightly, ill-arranged [objects] hanging around his neck. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860584bi' class='paragraph'>
+							nirdhūyamānās tv atha leśato ’pi tiṣṭheyur evākuśalā vitarkāḥ |<br />kāryāntarair adhyayanakriyād yaiḥ sevyo vidhir vismaraṇāya teṣām ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861668bi' class='paragraph'>
+							16.77 If, though they are being shaken off, a trace persists of unhelpful thoughts, <br /> One should resort to different tasks, such as study or physical work, as a means of consigning those thoughts to oblivion. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860585bi' class='paragraph'>
+							svaptavyam apy eva vicakṣaṇena kāyaklamo vāpi niṣevitavyaḥ |<br />na tv eva saṃcintyam asannimittaṃ yatrāvasaktasya bhaved anarthaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861669bi' class='paragraph'>
+							16.78 A clear-sighted person should even sleep or resort to physical exhaustion, <br /> But should never dwell on a bad stimulus, pending on which might be an adverse reaction. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860586bi' class='paragraph'>
+							yathā hi bhīto niśi taskarebhyo dvāraṃ priyebhyo ’pi na dātum icchet |<br />prājñas tathā saṃharati prayogaṃ samaṃ śubhasyāpy aśubhasya doṣaiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861670bi' class='paragraph'>
+							16.79 For just as a man afraid of thieves in the night would not open his door even to friends, <br /> So does a wise man withhold consent equally to the doing of anything bad or anything good that involves the faults.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860587bi' class='paragraph'>
+							evaṃprakārair api yady upāyair nivāryamāṇā na parāñmukhāḥ syuḥ |<br />tato yathāsthūlanibarhaṇena suvarṇadoṣā iva te praheyāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861671bi' class='paragraph'>
+							16.80 If, though fended off by such means, [faults] do not turn back, <br /> Then, eliminated in order of their grossness, they must be driven out like impurities from gold.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860588bi' class='paragraph'>
+							drutaprayāṇaprabhṛtīṃś ca tīkṣṇāt kāmaprayogāt parikhidyamānaḥ |<br />yathā naraḥ saṃśrayate tathaiva prājñena doṣeṣv api varitavyam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861672bi' class='paragraph'>
+							16.81 Just as a man who feels depressed following a torrid love affair takes refuge in activities like quick marching, so should a wise person proceed with regard to the faults.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860589bi' class='paragraph'>
+							te ced alabdhapratipakṣabhāvā naivopaāmyeyur asadvitarkāḥ |<br />muhūrtam apy aprativadhyamānā gṛhe bhujaṅgā iva nādhivāsyāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861673bi' class='paragraph'>
+							16.82 If their counteragent cannot be found and unreal fancies do not subside, <br /> They must not for a moment be left unchecked: no whiff of them should be tolerated, as if they were snakes in the house. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860590bi' class='paragraph'>
+							dante ’pi dantaṃ praṇidhāya kāmaṃ tālvagram utpīḍya ca jihvayāpi |<br />cittena cittaṃ prarigṛhya cāpi kāryaḥ prayatno na tu te ’nuvṛttāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861674bi' class='paragraph'>
+							16.83 Grit tooth against tooth, if you will, press the tongue forward and up against the palate, <br /> And grip the mind with the mind – make an effort, but do not yield to them.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860591bi' class='paragraph'>
+							kim atra citram yadi vītamoho vanaṃ gataḥ svasthamanā na muhyet |<br />ākṣipyamāṇo hṛdi tannimittair na kṣobhyate yaḥ sa kṛtī sa dhīraḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861675bi' class='paragraph'>
+							16.84 Is it any wonder that a man without any delusions should not become deluded when he has contentedly repaired to the forest? <br /> [But] a man who is not shaken when challenged to the core by the stimuli of the aforementioned [ideas, thoughts, and fancies]: he is a man of action; he is a steadfast man.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860592bi' class='paragraph'>
+							tad āryasatyādhigamāya pūrvaṃ viśodhayānena nayena mārgam |<br />yātrāgataḥ śatruvinigrahārthaṃ rājevy lakṣmīm ajitāṃ jigīṣan ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861676bi' class='paragraph'>
+							16.85 So, in order to make the noble truths your own, first clear a path according to this plan of action, <br /> Like a king going on campaign to subdue his foes, wishing to conquer unconquered dominions. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860593bi' class='paragraph'>
+							etāny araṇyāny abhitaḥ śivāni yogānukūlāny ajaneritāni |<br />kāyasya kṛtvā pravivekamātraṃ kleśaprahāṇāya bhajasva mārgam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861677bi' class='paragraph'>
+							16.86 These salubrious wilds that surround us are suited to practice and not thronged with people. <br /> Furnishing the body with ample solitude, cut a path for abandoning the afflictions.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860594bi' class='paragraph'>
+							kauṇḍinyananadakṛmilāniruddhās tipyopasenau vimalo ’tha rādhaḥ |<br />bāṣpottarau dhautakimoharājau kātyāyanadravyapinindavatsāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861678bi' class='paragraph'>
+							16.87 Kauṇḍinya, Nanda, Kṛmila, Aniruddha, Tiṣya, Upasena, Vimala, Rādha,<br /> Vāśpa, Uttara, Dhautaki, Moha-rāja, Kātyāyana, Dravya, Pilinda-vatsa, &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860595bi' class='paragraph'>
+							bhaddālibhadrāyaṇasarpadāsasubhūtigodattsujātavatsāḥ |<br />saṃgrāmajidbhadrajidaśvajic ca śroṇaś ca śoṇaś ca sa koṭikarṇaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861679bi' class='paragraph'>
+							16.88 Bhaddāli, Bhadrāyaṇa, Sarpa-dāsa, Subhūti, Go-datta, Sujāta, Vatsa,<br />Saṁgrāmajit, Bhadrajit, and Aśvajit, Śrona and Sona Koṭikarna,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860596bi' class='paragraph'>
+							kṣemājito nandakanandamātā vupālivāgīśayaśāoyaśodāḥ |<br />mahāhvayo valkalirāṣṭrapālau sudarśaanasvāgatameghikāś ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861680bi' class='paragraph'>
+							16.89 Kṣemā, Ajita, the mothers of Nandaka and Nanda, Upāli, Vāgīśa, Yaśas, Yaśoda,<br />Mahāhvaya, Valkalin, Rāṣṭra-pāla, Sudarśana, Svāgata and Meghika,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860597bi' class='paragraph'>
+							sa kapphinaḥ kāśyapa auruvilvo mahāmahākāśyapatiṣyanandāḥ |<br />pūrṇaś ca pūrṇaś ca sa pūrṇakaś ca śonāparāntaś ca sa pūrṇa eva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861681bi' class='paragraph'>
+							16.90 Kapphina, Kāśyapa of Uruvilvā, The great Mahā-kāśyapa, Tiṣya, Nanda,<br />Pūrṇa and Pūrṇa as well as Pūrṇaka and Pūrṇa Śonāparānta,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860598bi' class='paragraph'>
+							śāradvatīputrasubāhucundāḥ kondeyakāpyabhṛgukuṇṭhadhānāḥ |<br />saśaivalau revatakauṣṭhilau ca maudgalyagotraś ca gavāṃ patiś ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861682bi' class='paragraph'>
+							16.91 The son of Śāradvatī, Subāhu, Cunda, Kondeya, Kāpya, Bhṛgu, Kuṇṭha-dhāna,<br />Plus Śaivala, Revata and Kauṣṭhila, and he of the Maudgalya clan and Gavām-pati –&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860599bi' class='paragraph'>
+							yaṃ vikramaṃ yogavidhāv akurvaṃs tam eva śīghraṃ vidhivat kuruṣva |<br />tataḥ padaṃ prāpsyasi tair avāptaṃ sukhāvṛtais tvaṃ nivataṃ niyataṃ yaśaś ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861683bi' class='paragraph'>
+							16.92 Be quick to show the courage that they have shown in their practice, working to principle. <br /> Then you will assuredly take the step that they took and will realise the splendour that they realised.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860600bi' class='paragraph'>
+							dravyaṃ yathā syāt kaṭukaṃ rasena tac copayuktaṃ madhuraṃ vipāke |<br />tathaiva vīryaṃ kaṭukaṃ śrameṇa tasyārthasiddhyai madhuro vipākaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861684bi' class='paragraph'>
+							16.93 Just as a fruit may have flesh that is bitter to the taste and yet is sweet when eaten ripe, <br /> So heroic effort, through the struggle it involves, is bitter and yet, in accomplishment of the aim, its mature fruit is sweet. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860601bi' class='paragraph'>
+							vīryaṃ paraṃ kāryakṛtau hi mūlaṃ vīryād ṛte kā cana nāsti siddhiḥ |<br />udeti vīryād iha sarvasaṃpan nirvīryatā cet sakalaś ca pāpmā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861685bi' class='paragraph'>
+							16.94 Directed energy is paramount: for, in doing what needs to be done, it is the foundation; without directed energy there is no accomplishment at all; <br /> All success in this world arises from directed energy – and in the absence of directed energy wrongdoing is rampant.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860602bi' class='paragraph'>
+							alabdhasyālābho niyatam upalabdhasya vigamas tathaivātmāvajñā kṛpañam adhikebhyaḥ paribhavaḥ |<br />tamo nistejastvaṃ śrutiniyamatuṣṭivyuparamo nṛṇāṃ nirvīryāṇāṃ bhavati vinipātaś ca bhavati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861686bi' class='paragraph'>
+							16.95 No gaining of what is yet to be gained, and certain loss of what has been gained, <br /> Along with low self-esteem, wretchedness, the scorn of superiors, <br />Darkness, lack of spirit, and the breakdown of learning, restraint and contentment: <br /> For men without directed energy a great fall awaits. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860603bi' class='paragraph'>
+							nayaṃ śrutvā śakto yad ayam abhivṛddhiṃ na labhate paraṃ dharmaṃ jñātvā yad upari nivāsaṃ na labhate |<br >|gṛhaṃ tyaktvā muktau yad ayam upaśāntiṃ na labhate<br />nimittaṃ kausīdyaṃ bhavati puruṣasyātra na ripuḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861687bi' class='paragraph'>
+							16.96 When a capable person hears the guiding principle but realises no growth, <br /> When he knows the most excellent method but realises no upward repose,<br /> When he leaves home but in freedom realises no peace: <br />The cause is the laziness in him and not an enemy. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860604bi' class='paragraph'>
+							anikṣiptotsāho yadi khanati gāṃ vāri labhate prasaktaṃ vyāmathnan jvalanam araṇibhyāṃ janayati |<br />prayuktā yoge tu dhruvam upalabhante śramaphalaṃ<br />drutaṃ nityaṃ yānto girim api hi bhindanti saritaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861688bi' class='paragraph'>
+							16.97 A man obtains water if he digs the ground with unflagging exertion, <br /> And produces fire from fire-sticks by continuous twirling. <br /> But those are sure to reap the fruit of their effort whose energies are harnessed to practice, <br /> For rivers that flow swiftly and constantly cut through even a mountain.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860605bi' class='paragraph'>
+							kṛṣṭvā gāṃ paripālya ca śramaśatair aśnoti sasyaśāriyaṃ yatnena pravigāhya sāgarajalaṃ ratnaśriyā krīḍati |<br />śatrūṇām avadhūya vīryam iṣubhir bhuṅkte narendraśriyaṃ<br />tad vīryaṃ kuru śāntaye viniyataṃ vīrye hi sarvardddhayaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861689bi' class='paragraph'>
+							16.98 After ploughing and protecting the soil with great pains, [a farmer] gains a bounteous crop of corn; <br /> After striving to plumb the ocean’s waters, [a diver] revels in a bounty of coral and pearls; <br /> After seeing off with arrows the endeavour of rival kings, [a king] enjoys royal dominion. <br /> So direct your energy in pursuit of peace, for in directed energy, undoubtedly, lies all growth.” &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860606bi' class='paragraph'>
+							saundarananade mahākāvya āryasatyavyākhyāno nāma ṣoḍaśaḥ sargaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4860508";
+							kilderef = "Saund San: Johnston (1928) 16.1 - San: Johnston (1928) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861690bi' class='paragraph'>
+							The 16th Canto in the epic poem Handsome Nanda, titled “Communicating the Noble Truths.”&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4861592";
+							kilderef = "Saund Eng: Cross (2015)  - Eng: Cross (2015) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'></div><div class='textvar' style='width:49%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=1db7f86a-b346-11e5-99e8-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

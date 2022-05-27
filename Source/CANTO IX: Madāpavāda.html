@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=560' accesskey='1'>Aśvaghoṣa: Saundarananda</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Aśvaghoṣa: Saundarananda<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3628]" value="3628" id="lancheckbox" checked >Sanskrit: San: Johnston (1928)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_560[3629]" value="3629" id="lancheckbox" checked >English: Eng: Cross (2015)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="560">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='560'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v560">Search in Aśvaghoṣa: Saundarananda</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=560'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=560'>Aśvaghoṣa: Saundarananda</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="61071.CANTOI:Kapilavāstuvarṇana|61072.CANTOII:Rājavarṇana|61073.CANTOIII:Tathāgatavarṇana|61074.CANTOIV:Bhāryāyācitaka|61075.CANTOV:Nandapravrājana|61076.CANTOVI:Bhāryāvilāpa|61077.CANTOVII:Nandivilāpa|61078.CANTOVIII:Strīvighāta|61079.CANTOIX:Madāpavāda|61080.CANTOX:Svarganidarśana|61081.CANTOXI:Svargāpavāda|61082.CANTOXII:Paryavamarśa|61083.CANTOXIII:Śīlendriyajaya|61084.CANTOXIV:Ādiprasthāno|61085.CANTOXV:Vitarkaprahāṇa|61086.CANTOXVI:Āryasatyavyākhyāna|61087.CANTOXVII:Amṛtādhigama|61088.CANTOXVIII:Ājñāvyākaraṇa|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61071.CANTOI:Kapilavāstuvarṇana" border=0 hspace=2><a id="href_61071.CANTOI:Kapilavāstuvarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050055&level=1&cid=548072" class="ajax_tree0">CANTO I: Kapilavāstuvarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61072.CANTOII:Rājavarṇana" border=0 hspace=2><a id="href_61072.CANTOII:Rājavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050118&level=1&cid=548135" class="ajax_tree0">CANTO II: Rājavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61073.CANTOIII:Tathāgatavarṇana" border=0 hspace=2><a id="href_61073.CANTOIII:Tathāgatavarṇana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050184&level=1&cid=548201" class="ajax_tree0">CANTO III: Tathāgatavarṇana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61074.CANTOIV:Bhāryāyācitaka" border=0 hspace=2><a id="href_61074.CANTOIV:Bhāryāyācitaka" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050227&level=1&cid=548244" class="ajax_tree0">CANTO IV: Bhāryāyācitaka
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61075.CANTOV:Nandapravrājana" border=0 hspace=2><a id="href_61075.CANTOV:Nandapravrājana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050274&level=1&cid=548291" class="ajax_tree0">CANTO V: Nandapravrājana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61076.CANTOVI:Bhāryāvilāpa" border=0 hspace=2><a id="href_61076.CANTOVI:Bhāryāvilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050328&level=1&cid=548345" class="ajax_tree0">CANTO VI: Bhāryāvilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61077.CANTOVII:Nandivilāpa" border=0 hspace=2><a id="href_61077.CANTOVII:Nandivilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050378&level=1&cid=548395" class="ajax_tree0">CANTO VII: Nandivilāpa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61078.CANTOVIII:Strīvighāta" border=0 hspace=2><a id="href_61078.CANTOVIII:Strīvighāta" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050431&level=1&cid=548448" class="ajax_tree0">CANTO VIII: Strīvighāta
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61079.CANTOIX:Madāpavāda" border=0 hspace=2><a id="href_61079.CANTOIX:Madāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050494&level=1&cid=548511" class="ajax_tree0">CANTO IX: Madāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61080.CANTOX:Svarganidarśana" border=0 hspace=2><a id="href_61080.CANTOX:Svarganidarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050546&level=1&cid=548563" class="ajax_tree0">CANTO X: Svarganidarśana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61081.CANTOXI:Svargāpavāda" border=0 hspace=2><a id="href_61081.CANTOXI:Svargāpavāda" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050611&level=1&cid=548628" class="ajax_tree0">CANTO XI: Svargāpavāda
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61082.CANTOXII:Paryavamarśa" border=0 hspace=2><a id="href_61082.CANTOXII:Paryavamarśa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050674&level=1&cid=548691" class="ajax_tree0">CANTO XII: Paryavamarśa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61083.CANTOXIII:Śīlendriyajaya" border=0 hspace=2><a id="href_61083.CANTOXIII:Śīlendriyajaya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050718&level=1&cid=548735" class="ajax_tree0">CANTO XIII: Śīlendriyajaya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61084.CANTOXIV:Ādiprasthāno" border=0 hspace=2><a id="href_61084.CANTOXIV:Ādiprasthāno" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050775&level=1&cid=548792" class="ajax_tree0">CANTO XIV: Ādiprasthāno
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61085.CANTOXV:Vitarkaprahāṇa" border=0 hspace=2><a id="href_61085.CANTOXV:Vitarkaprahāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050828&level=1&cid=548845" class="ajax_tree0">CANTO XV: Vitarkaprahāṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61086.CANTOXVI:Āryasatyavyākhyāna" border=0 hspace=2><a id="href_61086.CANTOXVI:Āryasatyavyākhyāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050898&level=1&cid=548915" class="ajax_tree0">CANTO XVI: Āryasatyavyākhyāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61087.CANTOXVII:Amṛtādhigama" border=0 hspace=2><a id="href_61087.CANTOXVII:Amṛtādhigama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1050997&level=1&cid=549014" class="ajax_tree0">CANTO XVII: Amṛtādhigama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_61088.CANTOXVIII:Ājñāvyākaraṇa" border=0 hspace=2><a id="href_61088.CANTOXVIII:Ājñāvyākaraṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=560&mid=1051071&level=1&cid=549088" class="ajax_tree0">CANTO XVIII: Ājñāvyākaraṇa
+</td></tr></table>
+<script language=javascript>test('61079.CANTOIX:Madāpavāda|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=560&amp;mid=1050494&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548511&amp;mid=1050494&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=560&amp;cid=548511&amp;mid=1050494&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><div class='kilderef' id='4860104'></div><div class='clear'></div><span id='4860104bi' class='paragraph'>
+							athaivam ukto ’pi sa tena bhiṣuṇā jagāma naivopaśamaṃ priyāṃ prati |<br />tathā hi tām eva tadā sa cintayan na tasya śuśrāva visaṃjñavad vacaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><div class='kilderef' id='4861188'></div><div class='clear'></div><span id='4861188bi' class='paragraph'>
+							9.1 Though the beggar reproached him in such a manner, [Nanda] did not arrive at any kind of tranquillity with regard to his beloved; <br /> So much did he think about her that he failed, as if he were unconscious, to hear a word the other said. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860105bi' class='paragraph'>
+							yathā hi vaidyasya cikīrṣataḥ śivaṃ vaco na gṛhnāti mumūrṣur āturaḥ |<br />tathaiva matto balarūpayauvanair hitaṃ na jagrādha sa tasya tadvacaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861189bi' class='paragraph'>
+							9.2 For, just as an invalid who wants to die does not accept the kind advice of a doctor who intends to do him good; <br /> So Nanda, bubbling with strength and looks and youth, did not accept that salutary advice of the striver. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860106bi' class='paragraph'>
+							na cātra citraṃ yadi rāgapāpmanā mano ’bhibhūyeta tamovṛtāmanaḥ |<br />narasya pāpmā hi tadā nivartate yadā bhavaty antagataṃ tamas tanu ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861190bi' class='paragraph'>
+							9.3 It is not surprising, in such a case, that one whose mind is shrouded in darkness should be overpowered by the wrongness that arises out of a tainted desire; <br /> For a person’s wrongness ceases only when the darkness of ignorance, having reached its limit, begins to diminish. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860107bi' class='paragraph'>
+							tatas tathākṣiptam avekṣya taṃ tadā balena rūpeṇa ca yauvanena ca |<br />gṛhaprayāṇaṃ prati ca vyavasthitaṃ śaśāsa nandaṃ śramaṇaḥ sa śantaye ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861191bi' class='paragraph'>
+							9.4 And so, observing Nanda to be caught up, as he was, in his own strength and looks and youth, <br /> Seeing him all set to go home, the striver chastised Nanda, in the name of tranquillity.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860108bi' class='paragraph'>
+							balaṃ ca rūpaṃ ca navaṃ ca yauvanaṃ tathāvagacchāmi yathāvagacchasi |<br />ahaṃ iv idaṃ te trayam avyavastitaṃ yathāvabuddho na tathāvabudhyase ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861192bi' class='paragraph'>
+							9.5 “Your strength and looks and youthfulness I recognize as you do; <br /> But that these three are impermanent you do not realise as I do.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860109bi' class='paragraph'>
+							idaṃ hi rogāyatanaṃ jarāvaśaṃ nadītaṭānokahavac calācalam |<br />na vetsi dehaṃ jalaphenadurbalaṃ balasthatām ātmani yena manyase ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861193bi' class='paragraph'>
+							9.6 For this body is a domicile for disease and in the face of senility it teeters helplessly, like a tree with its roots on a riverbank. <br /> Because you do not know it to be as fragile as froth on water, therefore you feel there to be abiding strength in you. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860110bi' class='paragraph'>
+							yadānnapānāsanayānakarmaṇām asevanād apy atisevanād api |<br />śarīram āsannavipatti dṛśyate bale ’bhimānas tava kena hetunā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861194bi' class='paragraph'>
+							9.7 When, through failure to eat and drink, or sit down, or move about, and also through over-indulgence in those acts, <br /> The body manifestly goes to ruin, what reason is there for you to have the conceit of physical strength?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860111bi' class='paragraph'>
+							himātapavyādhijarākṣudādibhir yadāpy anarthair upamīyate jagat |<br />jalaṃ śucau māsa ivārkaraśmibhiḥ kṣayaṃ vrajan kiṃ baladṛpta manyase ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861195bi' class='paragraph'>
+							9.8 By cold and heat, by sickness and aging, and by hunger and other such adversities, the living are being reduced <br /> Like water in the hot season by the sun’s rays. In these circumstances, what are you thinking, O taker of pride in strength! as you wander towards your end?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860112bi' class='paragraph'>
+							tvagasthimāṃsakṣatajātmakaṃ yada śarīram āhāravaśena tiṣṭhati |<br />ajasram ārtaṃ satatapratikriyaṃ balānvito ’smīti kathaṃ vihanyase ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861196bi' class='paragraph'>
+							9.9 When a body made of skin, bone, flesh and blood owes its very existence to the taking of food, <br /> When it is always ailing, needing continuous intervention, how can you labour under an illusion like ‘I am inherently strong’? &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860113bi' class='paragraph'>
+							yathā ghaṭaṃ mṛnmayam āmam āśrito naras titīrṣet kṣubhitaṃ mahārṇavam |<br />samucchrayaṃ tadvad asāram udvahan balaṃ vyavasyed viṣayārtham udyataḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861197bi' class='paragraph'>
+							9.10 Like a man who aspires to cross the stormy ocean in an unbaked earthen pot, <br /> Is he who would assume the sapless accretion of his body to be strong as he carries it around, striving after an object. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860114bi' class='paragraph'>
+							śariram āmād api mṛnmayam āmam āśrito naras titīrṣet kṣubhitaṃ mahārṇavam |<br />citraṃ hi tiṣṭhed vidhivaddhṛto ghaṭād idaṃ nu niḥsāratmaṃ mataṃ mama ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861198bi' class='paragraph'>
+							9.11 But even more fragile than an unbaked earthen pot, in my opinion, is this body; <br /> For a pot that is properly kept might survive for many ages whereas this accretion crumbles even if well maintained. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860115bi' class='paragraph'>
+							yadāmbubhūvāyvanalāś ca dhātavaḥ sadā viruddhā viṣamā ivoragāḥ |<br />bhavanty anarthāya śarīram āśritāḥ kathaṃ balaṃ rogavidho vyavasyasi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861199bi' class='paragraph'>
+							9.12 When the elements of water, earth, wind and fire are in constant opposition, like antagonistic snakes,<br /> When they meet in a body only to make for calamity, how can you, in your propensity to sickness, be convinced of your strength? &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860116bi' class='paragraph'>
+							prāyanti mantraiḥ praśamaṃ bhujaṅgamā na mantrasādhyās tu bhavanti dhātavaḥ |<br />kva cic ca kiṃ cic ca daśanti pannagāḥ sadā ca sarvaṃ ca tudanti dhātavaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861200bi' class='paragraph'>
+							9.13 Snakes are lulled by charms, but the elements are not apt to be charmed. <br /> Snakes bite some people some of the time; the elements strike all people all of the time.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860117bi' class='paragraph'>
+							idaṃ hi śayyāsanapānabhojanair guṇaiḥ śariraṃ ciram apy avekṣitam |<br />na marṣayaty ekam api vytikramaṃ yato mahāśiviṣavat prakupyati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861201bi' class='paragraph'>
+							9.14 For this body, though long tended with good habits of sleeping and sitting, and of eating and drinking, <br /> Does not forgive a single step too far – at which it rears up in anger, like a great venomous snake. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860118bi' class='paragraph'>
+							yadā himārto jvalanaṃ niṣevate himaṃ nidāghābhihato ’bhikāṅkṣati |<br />kṣudhānivto ’nnaṃ salilaṃ tṛṣānvito balaṃ kutaḥ kiṃ ca kathaṃ ca kasya ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861202bi' class='paragraph'>
+							9.15 Pained by cold, one turns to fire; oppressed by heat, one longs for cold; <br /> When hungry, one longs for food; when thirsty, for water. Where then is strength? What is it? How is it? Whose is it? &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860119bi' class='paragraph'>
+							tad evam ajñāya śarīram āturaṃ balānvito ’smīti na mantum arhasi |<br />asāram asvantam aniścitaṃ jagaj jagaty anitye balam avyavasthitam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861203bi' class='paragraph'>
+							9.16 So see a body as ailing and do not think ‘I am possessed of strength.’ <br /> The world is insubstantial, inauspicious, and uncertain, and in an impermanent world, power is undependable.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860120bi' class='paragraph'>
+							kva kārtavīryasya balābhimāninaḥ shasrabāhor balam arjunasya tat |<br />cakarta bāhūn yudhi yasya bhārgavo mahānti śṛṅgāṇy aśanir girer iva ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861204bi' class='paragraph'>
+							9.17 Where is the power of Kṛta-vīrya’s son, the thousand-armed Arjuna, who fancied himself to be so strong? <br /> In battle, Bhārgava, ‘The Scion of the Bhṛgus,’ severed his arms like a thunderbolt lopping off the lofty horns of a mountain. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860121bi' class='paragraph'>
+							kva tadbalaṃ kaṃsavikarṣiṇo hares turaṅgarājasya puṭāvabhedinaḥ |<br />yam ekabāṇena nijaghinvān jarāḥ kramāgatā rūpam ivottamaṃ jarā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861205bi' class='paragraph'>
+							9.18 Where is the strength of Hari Kṛṣṇa, ‘The Kaṁsa-tormentor,’ who broke the Horse-King’s jaw? <br /> With one arrow from Jaras he was brought down, like utmost beauty brought down, in due order, by old age.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860122bi' class='paragraph'>
+							diteḥ sutasyāmararoṣakāriṇaś camūrucer vā namuceḥ kva tadbalam |<br />yam āhave kruddham ivāntakaṃ sthitaṃ jaghāna phenāvayavena vāsavaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861206bi' class='paragraph'>
+							9.19 Where is the strength of Namuci son of Diti, light of an army and provoker of the gods? <br /> He stood his ground in battle, furious as death, but Indra slew him with a spattering of foam.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860123bi' class='paragraph'>
+							balaṃ kurūṇāṃ kva ca tat tadābhavad yudhi jvalitvā tarasaujasā ca ye |<br />samitsammidhā jvalanā ivādhvare hatāsavo bhasmani paryavasthitāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861207bi' class='paragraph'>
+							9.20 And where is the power once possessed by the Kurus who blazed in combat with speed and stamina <br /> And then lay in ashes, like sacrificial fires whose firewood has burned, their life-breath snuffed out?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860124bi' class='paragraph'>
+							ato viditvā balvīryamānināṃ balānvitānām avamarditaṃ balam |<br />jagaj jarāmṛtyuvaśaṃ vicārayan bale ’bhimānaṃ na vidhātum arhasi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861208bi' class='paragraph'>
+							9.21 Know, therefore, that the strength of powerful men, who fancy themselves imbued with strength and drive, is ground down; <br /> And do not, as you survey a world in the sway of aging and death, take pride in strength. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860125bi' class='paragraph'>
+							balaṃ mahad vā yadi vā na manyase kuruṣva yuddhaṃ saha tāvad indriyaiḥ |<br />jayaś ca te ’trāsti mahac ca te balaṃ parājayaś ced vitathaṃ ca te balam&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861209bi' class='paragraph'>
+							9.22 Whether or not you think your strength is great, just do battle against the senses! <br /> If you are victorious in this, your strength is great; if you are defeated, your strength is nothing.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860126bi' class='paragraph'>
+							tathā matā vīratarā manīṣiṇo jayanti lohāni ṣaśindriyāṇi ye ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861210bi' class='paragraph'>
+							9.23 Less heroic are those men thought who conquer enemies armed with horses, chariots and elephants, <br /> Than those heroic thinkers are thought who conquer the restless six senses.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860127bi' class='paragraph'>
+							ahaṃ vapuṣmān iti yac ca manyase vicakṣaṇaṃ naitad idaṃ ca gṛhyatām |<br />kva tad vapuḥ sā ca vapuṣmatī tanur gadasya sāmyasya ca sāraṇasya ca ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861211bi' class='paragraph'>
+							9.24 Again, that you think ‘I am good looking’ is not astute. Let this be grasped: <br /> Where are the good looks, where the beautiful bodies, of Gada, Śāmba, and Sāraṇa?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860128bi' class='paragraph'>
+							yathā mayūraś calacitracandrako bibharti rūpaṃ guṇavat svabhāvataḥ |<br />śarīrasaṃskāraguṇād ṛte tathā bibharṣi rūpaṃ yadi rūpavān asi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861212bi' class='paragraph'>
+							9.25 Just as a peacock, flashing the eye in its tail, naturally carries its excellent looks, <br /> That is how, without any distinction got from grooming the body, you must carry your looks – if after all you are good-looking.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860129bi' class='paragraph'>
+							yadi pratīpaṃ vṛṇuyān na vāsasā na śaucakāle yadi saṃspṛśed apaḥ |<br />mṛjāviśeṣaṃ yadi nādadīta vā vapur vapuṣman vada kīdṛśaṃ bhavet ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861213bi' class='paragraph'>
+							9.26 If its unpleasantness were not covered with clothes, if it never touched water after excretion, <br /> Or if it never received a good washing, tell me, O handsome one! what might a body be like?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860130bi' class='paragraph'>
+							navaṃ vayaś cātmagataṃ niśāmya yad gṛhonmukhaṃ te viṣayāptaye manaḥ |<br />niyaccha tac chailanadīrayopamaṃ drutaṃ hi gacchaty anvirati yauvanam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861214bi' class='paragraph'>
+							9.27 Again, perceiving the prime of life to be a personal belonging, your mind looks forward to going home and gaining its sensual end: <br /> Curb that mind! for, like a river coursing down a rocky mountain, youth passes swiftly and does not return. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860131bi' class='paragraph'>
+							ṛtur vyatītaḥ parivartate punaḥ kṣayaṅ prayātaḥ punar eti candramāḥ |<br />gataṃ gataṃ naiva tu saṃnivartate jalaṃ nadīnāṃ ca nṛṇāṃ ca yauvanam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861215bi' class='paragraph'>
+							9.28 A season that has passed comes around again, the moon wanes and waxes again,<br /> But gone, gone, never to return is the water of rivers, and the youth of men. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860132bi' class='paragraph'>
+							vivarṇitaśmaśru valīvikuñcitaṃ viśīrṇadantaṃ śithilabhru niṣprabham |<br />yadā mukhaṃ drakṣyasi jarjaraṃ tadā jarābhibhūto vimado bhaviṣyasi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861216bi' class='paragraph'>
+							9.29 When you are white whiskered and wrinkled, with broken teeth and sagging brows; when you are lacking in lustre; <br /> When, humbled by age, you see your face grown old, then you will sober up. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860133bi' class='paragraph'>
+							niṣevya pānaṃ madanīyam uttamaṃ niśāvivāseṣu cirād vimādyati |<br />naras tu matto balarūpayauvanair na kaś cid aprāpya jarāṃ vimādyati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861217bi' class='paragraph'>
+							9.30 Having wasted nights and greeted dawns drinking the most intoxicating liquor, one finally comes around, <br /> But drunk on strength, looks and youth, no man ever comes round – until he reaches old age.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860134bi' class='paragraph'>
+							yathekṣur atyantarasaprapīḍito bhuvi praviddho dahanāya śuṣyate |<br />tathā jarāyantraniīḍitā tanur nipītasārā maraṇāya tiṣṭhati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861218bi' class='paragraph'>
+							9.31 Just as sugar-cane, when all its juice has been squeezed out, is thrown on the ground to dry, ready for burning, <br /> So, pressed in the vice of aging and drained of energy, does the body wait to die. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860135bi' class='paragraph'>
+							yathā hi nṛbhyāṃ karapattram īritaṃ samucchritaṃ dāru bhinatty anekadhā |<br />tathocchritāṃ pātayati prajām imām aharniśābhyām upasaṃhitā jarā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861219bi' class='paragraph'>
+							9.32 Just as a saw worked by two men cuts a tall tree into many pieces, <br /> So old age, pushed and pulled by day and night, topples people here and now who are high and mighty&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860136bi' class='paragraph'>
+							smṛteḥ pramoṣo vapuṣaḥ parābhavo rateḥ kṣayo vācchruticakṣuṣāṃ grahaḥ |<br />śramasya yonir balavīryayor vadho jarāsamo nāsti śarīriṇāṃ ripuḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861220bi' class='paragraph'>
+							9.33 Robber of memory; destroyer of looks; ender of pleasure; seizer of speech, hearing and sight; <br /> Birthplace of fatigue; slayer of strength and manly vigour: for those with a body, there is no enemy to rival aging.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860137bi' class='paragraph'>
+							idaṃ viditvā nidhanasya daiśikaṃ jarābhidahānaṃ jagato mahadbhayam |<br />ahaṃ vapuṣmān balavān yuveti vā na mānam āroḍhum anāryam arhasi ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861221bi' class='paragraph'>
+							9.34 Knowing this great terror of the world named ‘aging’ to be a pointer on the way to death, <br /> Do not rise to the ignoble conceit of an ‘I’ that is beautiful, or young, or strong. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860138bi' class='paragraph'>
+							ahaṃ mamety eva ca raktacetasāṃ śarīrasaṃjñā tava yaḥ kalau grahaḥ |<br />tam utsṛjaivaṃ yadi śāmyatā bhaved bhayaṃ hy ahaṃ ceti mameti cārchati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861222bi' class='paragraph'>
+							9.35 With your mind tainted by ‘I’ and ‘mine,’ you are latching onto the strife called a body. <br /> Let go of that, if peace is to come about, for ‘I’ and ‘mine’ usher in danger.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860139bi' class='paragraph'>
+							yadā śarīre na vaśo ’sti kasya cin nirasyamāne vividhair upaplavaiḥ |<br />kathaṃ kṣamaṃ vettum ahaṃ mameti vā śarīrasaṃjñaṃ gṛham āpadām idam ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861223bi' class='paragraph'>
+							9.36 When no-one has dominion over a body that is ravaged by manifold misfortunes, <br /> How can it be right to recognize as ‘I’ or as ‘mine’ this house of calamities called a body?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860140bi' class='paragraph'>
+							sapannage yaḥ kugṛhe sadāśucau rameta nityaṃ pratisaṃskṛte ’bale |<br />sa duṣṭadhātāv aśucau calācale rameta kāye viparītdarśanaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861224bi' class='paragraph'>
+							9.37 One who would delight in a flimsy snake-infested hovel that was always unclean and constantly needing repair:<br /> He is the man of perverted view who would delight in a body with its corrupted elements and unclean, unstable state.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860141bi' class='paragraph'>
+							yathā prajābhyaḥ kunṛpo balād balīn haraty aśeṣaṃ ca na cābhirakṣati |<br />tathaiva kāvyo vasanādisādhanaṃ haraty aśeṣaṃ ca na cānuvartate ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861225bi' class='paragraph'>
+							9.38 Just as a bad king takes forcibly from his subjects his full toll of taxes, and yet does not protect; <br /> So the body takes its full toll of provisions such as clothes and the like, and yet does not obey. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860142bi' class='paragraph'>
+							yathā prarohanti tṛṇāny ayatnataḥ kṣitau prayatnāt tu bhavnti śālayaḥ |<br />tathaiva duḥkhāni tṛñāny ayatnataḥ kṣitau pryatnāt tu bhavanti vā na vā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861226bi' class='paragraph'>
+							9.39 Just as in soil, grass sprouts readily but rice is grown through sustained effort, <br /> So too does sorrow arise readily whereas happiness is produced with effort, if at all.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860143bi' class='paragraph'>
+							śarīram ārtaṃ parikarṣataś calaṃ na cāsti kiṃ cit paramārthataḥ sukham |<br />sukhaṃ hi duḥkhapratikārasevayā sthite ca duḥkhe tanuni vyasvasyati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861227bi' class='paragraph'>
+							9.40 For him who drags around a hurting, perishable body, there is no such thing, in the supreme sense, as happiness; <br /> For what he determines to be happiness, by taking counter-measures against suffering, is only a condition wherein suffering remains minimal.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860144bi' class='paragraph'>
+							yathānapekṣyāgryam apīsitaṃ sukhaṃ prabādhate duḥkham upetam aṇv api |<br />tathānapekṣyātmani duḥkham āgataṃ na vidyate kiṃ cana kasya cit sukham ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861228bi' class='paragraph'>
+							9.41 Just as the intrusion of even a slight discomfort spoils enjoyment of the greatest longed-for pleasure, <br /> In a similar way, nobody ever enjoys any happiness by disregarding suffering that is upon him. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860145bi' class='paragraph'>
+							śarīram īdṛgbhahuduḥkham adhruvaṃ phalānurodhāh atha nāvagacchasi |<br />dravat phalebhyo dhṛtiraśmibhir mano nigṛhyatāṃ gaur iva śasyalālasā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861229bi' class='paragraph'>
+							9.42 You fail to see the body as it is – full of suffering and inconstant – because of fondness for its effects: <br /> Let the mind that chases after effects, like a cow after corn, be restrained by the reins of steadfastness. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860146bi' class='paragraph'>
+							na kāmabhogā hi bhavanti tṛptaye havīṃṣi dīptasya vibhāvasor iva |<br />yathā yathā kāmasukheṣu vartate tathā tathecchā viṣayeṣu vardhate ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861230bi' class='paragraph'>
+							9.43 For sensual enjoyments, like offerings fed into a blazing fire, do not make for satisfaction; <br /> The more one indulges in sensual pleasures, the more the desire for sensual objects grows.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860147bi' class='paragraph'>
+							yathā ca kuṣṭhavyasanena duḥkhitaḥ pratāpanān naiva śamaṃ nigacchati |<br />tathendriyārtheṣv ajitendriyaś caran na kāmabhogair upaśāntim ṛcchati ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861231bi' class='paragraph'>
+							9.44 Again, just as a man suffering from the blight of leprosy does not obtain a cure by way of application of heat, <br /> Similarly, one who goes among sense objects with his senses unconquered does not tend towards peace by way of sensual enjoyments. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860148bi' class='paragraph'>
+							yathā hi bhaiṣajyasukhābhikāṅkṣayā bhajeta rogān na bhajeta tatkṣamam |<br />tathā śarīre bahuduḥkhabhājane rameta mohād viṣayābhikāṅkṣayā ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861232bi' class='paragraph'>
+							9.45 For just as desire for pleasure from one’s medicine might cause one to accept one’s infirmity instead of taking proper measures against it, <br /> So, because of desire for one’s object, might one ignorantly rejoice in that receptacle of much suffering which is a body. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860149bi' class='paragraph'>
+							anarthakāmaḥ puruṣasya yo janaḥ sa tasya śatruḥ kila tena karmaṇā |<br />anarthamūlā viṣayāś ca kevalā nanu praheyā viṣamā yathārayaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861233bi' class='paragraph'>
+							9.46 One who wishes adversity on a man is said, because of that action, to be his enemy. <br /> Should not sense objects, as the sole root of adversity, be shunned as dangerous enemies? &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860150bi' class='paragraph'>
+							ihaiva bhūtvā ripavo vadhātmakāḥ prayānti kāle puruṣasya mitratām |<br />paratra caiveha ca duḥkhahetavo bhavanti kāmā na tu kasya cic chivāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861234bi' class='paragraph'>
+							9.47 Those who were his deadly enemies in this world can in time become a man’s friend; <br /> But not benign for anybody, in this or other worlds, are the desires which are the causes of suffering. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860151bi' class='paragraph'>
+							yathopayuktaṃ rasavarṇagandhavad vadhāya kiṃpākaphalaṃ na puṣṭaye |<br />niṣevyamāṇā viṣayāś calātmano bhavanty anarthāya tathā na bhūtaye ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861235bi' class='paragraph'>
+							9.48 Just as eating a tasty, colourful and fragrant kiṁpāka fruit leads to death not nourishment, <br /> So an imbalanced person’s devotion to objects makes for misfortune, and not for well-being.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860152bi' class='paragraph'>
+							tat etad ājñāya vipāpmanātmanā vimokṣadharmādyupasaṃhitaṃ hitam |<br />juṣasva me sajjanasaṃmataṃ mataṃ pracakṣva vā niścayam udgiran giram ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861236bi' class='paragraph'>
+							9.49 As an innocent, then, heed this good advice pertaining to liberation, dharma, and so forth; <br /> Affirm my opinion, with which the righteous concur. Or else speak up and state your agenda.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860153bi' class='paragraph'>
+							iti hitam api bahv apīdam uktaḥ śrutamahatā śramaṇena tena nandaḥ |<br />na dhṛtim upayayau na śarma lebhe dvirada ivātimado madāndhacetāḥ ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861237bi' class='paragraph'>
+							9.50 Though reproached at length in this salutary fashion by a striver so great in hearing what is heard, <br /> Nanda neither found firmness nor took comfort: he was like a tusker in full rut, mind blinded by lust.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860154bi' class='paragraph'>
+							nandasya bhāvam avagamya tataḥ sa bhikṣuḥ pāriplavaṃ gṛhasukhābhimukhaṃ na dharme |<br />sattvāśayānuśayabhāvaparkṣakāya buddhāya tattvadiuṣe kathayāṃ cakāra ||&nbsp;</span></div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861238bi' class='paragraph'>
+							9.51 Then, having assured himself that Nanda’s being was not in the dharma but was turned unsteadily towards the comforts of home, <br /> That beggar reported back to the investigator of living creatures’ dispositions, tendencies and ways of being, to the Buddha, knower of reality. &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'><div class='Sanskrit'><span id='4860155bi' class='paragraph'>
+							saundaranande mahākāvye madāpavādo nāma navamaḥ sargaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4860104";
+							kilderef = "Saund San: Johnston (1928) 9.1 - San: Johnston (1928) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:49%;'><div class='English'><span id='4861239bi' class='paragraph'>
+							The 9th canto in the epic poem Handsome Nanda, titled “Negation of Vanity.”&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "4861188";
+							kilderef = "Saund Eng: Cross (2015)  - Eng: Cross (2015) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:49%;'></div><div class='textvar' style='width:49%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=1c49cafa-b346-11e5-99e8-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
